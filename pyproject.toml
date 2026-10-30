@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qec-project"
+version = "0.1.0"
+description = "Reproducible surface-code decoder research infrastructure"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+research = ["stim>=1.15,<2", "pymatching>=2.3,<3", "sinter>=1.15,<2"]
+
+[project.scripts]
+qec-project = "qec_project.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
