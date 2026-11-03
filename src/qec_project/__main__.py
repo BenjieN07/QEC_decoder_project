@@ -48,6 +48,13 @@ def write_manifest(config):
 def main(argv=None):
     import sys
     argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] == 'compare':
+        parser = argparse.ArgumentParser(description='M3 paired predecoder comparison')
+        parser.add_argument('mode')
+        parser.add_argument('--replay', type=Path, required=True)
+        args = parser.parse_args(argv)
+        from .predecoder import compare
+        return compare(args.replay)
     if argv and argv[0] == 'benchmark':
         parser = argparse.ArgumentParser(description='M2 fixed-sample CPU workload replay')
         parser.add_argument('mode')
