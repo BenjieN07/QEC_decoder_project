@@ -4,9 +4,10 @@
 
 M0 complete. M1 validated baseline available. M2–M4 have working preliminary
 research checkpoints, with limited workload coverage and statistical power.
-M5 is blocked by the missing Verilator/cocotb/Yosys environment. M6's final
-hardware/software comparison and research write-up are not complete. No FPGA
-measurements, RTL verification or synthesis results exist.
+M5 now has a verified fixed-graph RTL prototype for d=3 X/Z and d=5 X, with
+cocotb/Verilator checks and generic Yosys synthesis. See milestones/M5.md and
+evidence/M5. M6's final controlled comparison and research write-up are not complete.
+No physical FPGA measurements or timing closure results exist.
 
 ## What the project studies
 

@@ -1,0 +1,9 @@
+{
+  "vectors_accepted": 9262,
+  "outputs_consumed": 9260,
+  "cycles": 14314,
+  "resets": 3,
+  "note": "Resets discard pending output; 10 ns test clock is not achieved timing",
+  "unstalled_latency_cycles": 1,
+  "unstalled_initiation_interval_cycles": 1
+}

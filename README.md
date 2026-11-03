@@ -5,7 +5,9 @@ MWPM work and communication while retaining acceptable logical accuracy?
 
 **Current scope: M1 baseline and preliminary M2–M4 checkpoints implemented.**
 See [project status](reports/PROJECT_STATUS.md) for commands, measured results and
-remaining acceptance work. M5 hardware tooling and M6 final study remain incomplete.
+remaining acceptance work. M5 now includes a verified fixed-graph RTL prototype;
+M6's final study remains incomplete. See [hardware instructions](rtl/README.md)
+and [M5 report](reports/milestones/M5.md) for reproduction and measured evidence.
 
 ## See actual simulation results
 

@@ -1,0 +1,182 @@
+[
+  {
+    "basis": "X",
+    "distance": 3,
+    "rounds": 3,
+    "detectors": 24,
+    "observables": 1,
+    "edges": 54,
+    "vectors": 2302,
+    "config": {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 3,
+      "rounds": 3,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    "git": {
+      "commit": "8b0b9b78c7a0d1ced17d30e24f9d693647a329cb",
+      "status_porcelain": "M .gitignore\n?? rtl/\n?? scripts/\n?? tests/test_predecoder_invariants.py"
+    },
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.5.4",
+      "stim": "1.16.0",
+      "pymatching": "2.4.0"
+    },
+    "dem_sha256": "d10b06fef24751b7838d2c72cefd7460ea9b3b58d835f38c61f6384e00dd9ee3",
+    "cells": 602,
+    "cell_types": {
+      "$_ANDNOT_": 49,
+      "$_NOT_": 6,
+      "$_AND_": 54,
+      "$_OR_": 351,
+      "$_NOR_": 2,
+      "$_NAND_": 2,
+      "$_XNOR_": 22,
+      "$_XOR_": 86,
+      "$_ORNOT_": 5,
+      "$_SDFFE_PP0N_": 1,
+      "$_SDFFE_PP0P_": 24
+    },
+    "register_bits": 25,
+    "cycles": {
+      "vectors_accepted": 2302,
+      "outputs_consumed": 2300,
+      "cycles": 3532,
+      "resets": 3,
+      "note": "Resets discard pending output; 10 ns test clock is not achieved timing",
+      "unstalled_latency_cycles": 1,
+      "unstalled_initiation_interval_cycles": 1
+    }
+  },
+  {
+    "basis": "Z",
+    "distance": 3,
+    "rounds": 3,
+    "detectors": 24,
+    "observables": 1,
+    "edges": 54,
+    "vectors": 2302,
+    "config": {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 3,
+      "rounds": 3,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    "git": {
+      "commit": "8b0b9b78c7a0d1ced17d30e24f9d693647a329cb",
+      "status_porcelain": "M .gitignore\n?? rtl/\n?? scripts/\n?? tests/test_predecoder_invariants.py"
+    },
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.5.4",
+      "stim": "1.16.0",
+      "pymatching": "2.4.0"
+    },
+    "dem_sha256": "04451e5e6c93c03e6f8fe12cb904f7a42bc941bfc82e9c09bb929564e39e63c1",
+    "cells": 597,
+    "cell_types": {
+      "$_ANDNOT_": 48,
+      "$_NOT_": 2,
+      "$_AND_": 54,
+      "$_OR_": 350,
+      "$_NOR_": 2,
+      "$_NAND_": 2,
+      "$_XNOR_": 30,
+      "$_XOR_": 78,
+      "$_ORNOT_": 6,
+      "$_SDFFE_PP0N_": 1,
+      "$_SDFFE_PP0P_": 24
+    },
+    "register_bits": 25,
+    "cycles": {
+      "vectors_accepted": 2302,
+      "outputs_consumed": 2300,
+      "cycles": 3532,
+      "resets": 3,
+      "note": "Resets discard pending output; 10 ns test clock is not achieved timing",
+      "unstalled_latency_cycles": 1,
+      "unstalled_initiation_interval_cycles": 1
+    }
+  },
+  {
+    "basis": "X",
+    "distance": 5,
+    "rounds": 5,
+    "detectors": 120,
+    "observables": 1,
+    "edges": 430,
+    "vectors": 9262,
+    "config": {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 5,
+      "rounds": 5,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    "git": {
+      "commit": "8b0b9b78c7a0d1ced17d30e24f9d693647a329cb",
+      "status_porcelain": "M .gitignore\n?? rtl/\n?? scripts/\n?? tests/test_predecoder_invariants.py"
+    },
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.5.4",
+      "stim": "1.16.0",
+      "pymatching": "2.4.0"
+    },
+    "dem_sha256": "fbb0afccc3cee36c6aa70633ce1aeb9f938baa30ef5b704feb825875611d5f35",
+    "cells": 7055,
+    "cell_types": {
+      "$_ANDNOT_": 413,
+      "$_NOT_": 33,
+      "$_AND_": 430,
+      "$_OR_": 5177,
+      "$_NOR_": 2,
+      "$_NAND_": 2,
+      "$_XOR_": 726,
+      "$_XNOR_": 134,
+      "$_ORNOT_": 17,
+      "$_SDFFE_PP0N_": 1,
+      "$_SDFFE_PP0P_": 120
+    },
+    "register_bits": 121,
+    "cycles": {
+      "vectors_accepted": 9262,
+      "outputs_consumed": 9260,
+      "cycles": 14314,
+      "resets": 3,
+      "note": "Resets discard pending output; 10 ns test clock is not achieved timing",
+      "unstalled_latency_cycles": 1,
+      "unstalled_initiation_interval_cycles": 1
+    }
+  }
+]

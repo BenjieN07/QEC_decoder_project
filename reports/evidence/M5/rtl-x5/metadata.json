@@ -1,0 +1,36 @@
+{
+  "basis": "X",
+  "distance": 5,
+  "rounds": 5,
+  "detectors": 120,
+  "observables": 1,
+  "edges": 430,
+  "vectors": 9262,
+  "config": {
+    "code_type": "rotated_surface_code",
+    "basis": "X",
+    "distance": 5,
+    "rounds": 5,
+    "noise": {
+      "after_clifford_depolarization": 0.005,
+      "before_round_data_depolarization": 0.005,
+      "before_measure_flip_probability": 0.005,
+      "after_reset_flip_probability": 0.005
+    },
+    "shots": 1000,
+    "seed": 42,
+    "output_dir": "results",
+    "decoder": "pymatching"
+  },
+  "git": {
+    "commit": "8b0b9b78c7a0d1ced17d30e24f9d693647a329cb",
+    "status_porcelain": "M .gitignore\n?? rtl/\n?? scripts/\n?? tests/test_predecoder_invariants.py"
+  },
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.5.4",
+    "stim": "1.16.0",
+    "pymatching": "2.4.0"
+  },
+  "dem_sha256": "fbb0afccc3cee36c6aa70633ce1aeb9f938baa30ef5b704feb825875611d5f35"
+}
