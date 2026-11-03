@@ -1,0 +1,49 @@
+{
+  "shots": 30000,
+  "logical_failures": 503,
+  "ci": [
+    0.015374400958275478,
+    0.01828267126051587
+  ],
+  "all_residuals_frames_and_predictions_match_B": true,
+  "graph": {
+    "basis": "Z",
+    "distance": 3,
+    "rounds": 3,
+    "detectors": 24,
+    "observables": 1,
+    "edges": 54,
+    "vectors": 31302,
+    "sample_start": 302,
+    "sample_count": 30000,
+    "replay": "results\\a5e97eb8db434ac89a80a9deef35002f\\point-19",
+    "config": {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 3,
+      "rounds": 3,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 30000,
+      "seed": 22250954,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    "git": {
+      "commit": "28f517e56d3ce4655afc8b3ebe2af6b5e6b61926",
+      "status_porcelain": "M rtl/tb/verify_predecoder.py\n M scripts/collect_rtl_evidence.py\n M scripts/prepare_rtl.py\n M scripts/verify_rtl.py\n M tests/test_research_methods.py\n?? scripts/retime_study.py\n?? scripts/score_rtl_replay.py\n?? scripts/study_queues.py\n?? src/qec_project/queueing.py"
+    },
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.5.4",
+      "stim": "1.16.0",
+      "pymatching": "2.4.0"
+    },
+    "dem_sha256": "04451e5e6c93c03e6f8fe12cb904f7a42bc941bfc82e9c09bb929564e39e63c1"
+  },
+  "scope": "Actual RTL outputs followed by CPU MWPM; simulator wall time is not hardware latency"
+}

@@ -46,9 +46,11 @@ def plots(directory):
             for side,style in [('baseline','-'),('hybrid','--')]:
                 ax.plot([r['p'] for r in points],[r[f'{encoding}_{side}_bytes']/r['shots'] for r in points],
                         marker='o',linestyle=style,label=f'd={d}, {"A" if side=="baseline" else "B"}')
-        ax.set(xlabel='p',ylabel='Serialized bytes per memory window',title=f'{encoding.capitalize()} format (headers + frame included)');ax.legend(fontsize=8);ax.grid(alpha=.2)
+        ax.set(xlabel='p',ylabel='Serialized bytes per memory window',title=f'{encoding.capitalize()} format (headers + frame included)');ax.grid(alpha=.2)
+    handles,labels=axes[0].get_legend_handles_labels()
+    fig.legend(handles,labels,loc='lower center',ncol=3,fontsize=8)
     fig.suptitle('X memory, rounds=d; adaptive adds one format-tag byte')
-    fig.tight_layout();fig.savefig(figure_dir/'communication.png',dpi=160);plt.close(fig)
+    fig.tight_layout(rect=(0,.12,1,1));fig.savefig(figure_dir/'communication.png',dpi=160);plt.close(fig)
 
     hardware=directory/'hardware_summary.json'
     if not hardware.exists():hardware=Path('reports/evidence/M5/summary.json')

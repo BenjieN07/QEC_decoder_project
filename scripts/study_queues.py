@@ -11,11 +11,13 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('study',type=Path)
     args=parser.parse_args();output=args.study
     spec=json.loads((output/'manifest.json').read_text())['study']
+    hardware_file=output/'hardware_summary.json'
+    verified_seeds={row['config']['seed'] for row in json.loads(hardware_file.read_text()) if row.get('replay')} if hardware_file.exists() else set()
     summaries=[]
     for point in sorted(output.glob('point-*')):
         config=json.loads((point/'config.json').read_text())
         original=np.load(point/'samples.npz')['detectors']
-        for mode in ('isolated','max2'):
+        for mode in ['isolated' if limit is None else f'max{limit}' for limit in spec['event_limits']]:
             timing_file=point/f'{mode}-timing.npz'
             if not timing_file.exists():continue
             stages=np.load(timing_file)['stages_ns'];count=len(stages)
@@ -37,6 +39,7 @@ def main():
                         result.update(point=point.name,architecture=architecture,mode=mode,basis=config['basis'],
                                       distance=config['distance'],rounds=config['rounds'],p=config['noise']['after_clifford_depolarization'],
                                       arrival_period_ns=period,bandwidth_bits_per_second=bandwidth,
+                                      functional_rtl_replay_verified=config['seed'] in verified_seeds if architecture=='C_assumed' else None,
                                       C_warning='Clock period assumed, serialization and downstream CPU measured; no target timing closure' if architecture=='C_assumed' else None)
                         summaries.append(result)
                         if point.name=='point-01' and mode=='isolated' and bandwidth==spec['bandwidths_bits_per_second'][-1] and period==spec['arrival_periods_ns'][0]:

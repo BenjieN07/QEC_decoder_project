@@ -31,4 +31,4 @@ def replay(service_ns,period_ns,rounds,deadline_ns,capacity):
                 latency_ns=np.percentile(feedback,[50,95,99]).tolist(),
                 required_including_service_per_stage=max_occupancy.tolist(),
                 capacity_violation_events=violations,assumed_capacity=capacity,drops=0,
-                backlog_at_last_arrival=sum(r['finish_ns']>len(services)*interval for r in records))
+                backlog_at_last_arrival=int(sum(r['finish_ns']>len(services)*interval for r in records)))

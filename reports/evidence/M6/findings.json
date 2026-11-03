@@ -1,0 +1,429 @@
+{
+  "study_source": "results\\a5e97eb8db434ac89a80a9deef35002f",
+  "controls_source": "results\\4fe7bed834e54a54af707b5c8fec999e",
+  "main_points": 36,
+  "main_shots": 1080000,
+  "controls_shots": 40000,
+  "modes": {
+    "isolated": {
+      "baseline_failures": 55756,
+      "hybrid_failures": 56492,
+      "A_only": 1090,
+      "B_only": 1826,
+      "points_positive_paired_interval": 8,
+      "batch_slowdown_median": 2.3846133470957307,
+      "batch_slowdown_range": [
+        1.4475432664237564,
+        4.241754898381404
+      ],
+      "sparse_reduction_range": [
+        0.09223757411131717,
+        0.4766845002428506
+      ],
+      "adaptive_reduction_range": [
+        0.0,
+        0.283066477341966
+      ]
+    },
+    "max2": {
+      "baseline_failures": 55756,
+      "hybrid_failures": 55756,
+      "A_only": 0,
+      "B_only": 0,
+      "points_positive_paired_interval": 0,
+      "batch_slowdown_median": 2.835423483787962,
+      "batch_slowdown_range": [
+        1.685286011964778,
+        4.89302785812148
+      ],
+      "sparse_reduction_range": [
+        0.0,
+        0.061800931366148726
+      ],
+      "adaptive_reduction_range": [
+        0.0,
+        0.05260525682108652
+      ]
+    }
+  },
+  "examples": [
+    {
+      "distance": 3,
+      "mode": "isolated",
+      "shots": 30000,
+      "baseline_failures": 590,
+      "hybrid_failures": 590,
+      "baseline_ci": [
+        0.018155832392769557,
+        0.021300497239070362
+      ],
+      "hybrid_ci": [
+        0.018155832392769557,
+        0.021300497239070362
+      ],
+      "paired_delta": 0.0,
+      "paired_delta_ci": [
+        -0.00014605688714328297,
+        0.00014605688714328297
+      ],
+      "baseline_only": 0,
+      "hybrid_only": 0,
+      "original_events": 43659,
+      "residual_events": 20661,
+      "dense_bytes": 600000,
+      "sparse_baseline_bytes": 684636,
+      "sparse_hybrid_bytes": 592644,
+      "adaptive_baseline_bytes": 591714,
+      "adaptive_hybrid_bytes": 572925,
+      "batch_per_window_ns": {
+        "baseline_ns": {
+          "p50": 376.07421875,
+          "p95": 798.9160156249999,
+          "p99": 875.251953125
+        },
+        "predecode_ns": {
+          "p50": 466.259765625,
+          "p95": 1333.65234375,
+          "p99": 1356.65234375
+        },
+        "residual_decode_ns": {
+          "p50": 284.814453125,
+          "p95": 458.017578125,
+          "p99": 472.189453125
+        },
+        "total_hybrid_ns": {
+          "p50": 853.41796875,
+          "p95": 1684.951171875,
+          "p99": 1692.498046875
+        }
+      },
+      "single_window_ns": {
+        "A": {
+          "p50": 9100.0,
+          "p95": 53354.99999999995,
+          "p99": 141022.99999999997
+        },
+        "B_scalar": {
+          "p50": 19350.0,
+          "p95": 90705.0,
+          "p99": 180873.99999999994
+        }
+      }
+    },
+    {
+      "distance": 3,
+      "mode": "max2",
+      "shots": 30000,
+      "baseline_failures": 590,
+      "hybrid_failures": 590,
+      "baseline_ci": [
+        0.018155832392769557,
+        0.021300497239070362
+      ],
+      "hybrid_ci": [
+        0.018155832392769557,
+        0.021300497239070362
+      ],
+      "paired_delta": 0.0,
+      "paired_delta_ci": [
+        -0.00014605688714328297,
+        0.00014605688714328297
+      ],
+      "baseline_only": 0,
+      "hybrid_only": 0,
+      "original_events": 43659,
+      "residual_events": 33187,
+      "dense_bytes": 600000,
+      "sparse_baseline_bytes": 684636,
+      "sparse_hybrid_bytes": 642748,
+      "adaptive_baseline_bytes": 591714,
+      "adaptive_hybrid_bytes": 576006,
+      "batch_per_window_ns": {
+        "baseline_ns": {
+          "p50": 514.2578125,
+          "p95": 543.818359375,
+          "p99": 544.349609375
+        },
+        "predecode_ns": {
+          "p50": 1241.015625,
+          "p95": 1509.599609375,
+          "p99": 1548.248046875
+        },
+        "residual_decode_ns": {
+          "p50": 494.091796875,
+          "p95": 573.115234375,
+          "p99": 582.435546875
+        },
+        "total_hybrid_ns": {
+          "p50": 1735.107421875,
+          "p95": 2076.2109375,
+          "p99": 2129.3828125
+        }
+      },
+      "single_window_ns": {
+        "A": {
+          "p50": 25600.0,
+          "p95": 63179.99999999993,
+          "p99": 128859.99999999994
+        },
+        "B_scalar": {
+          "p50": 53350.0,
+          "p95": 128300.0,
+          "p99": 202909.0
+        }
+      }
+    },
+    {
+      "distance": 5,
+      "mode": "isolated",
+      "shots": 30000,
+      "baseline_failures": 470,
+      "hybrid_failures": 487,
+      "baseline_ci": [
+        0.01432217106453202,
+        0.017135182825171937
+      ],
+      "hybrid_ci": [
+        0.014864017413128847,
+        0.01772652470671104
+      ],
+      "paired_delta": 0.0005666666666666667,
+      "paired_delta_ci": [
+        -1.9843264686917532e-05,
+        0.0011469326038542399
+      ],
+      "baseline_only": 6,
+      "hybrid_only": 23,
+      "original_events": 253983,
+      "residual_events": 140759,
+      "dense_bytes": 960000,
+      "sparse_baseline_bytes": 1525932,
+      "sparse_hybrid_bytes": 1073036,
+      "adaptive_baseline_bytes": 967775,
+      "adaptive_hybrid_bytes": 851295,
+      "batch_per_window_ns": {
+        "baseline_ns": {
+          "p50": 2841.455078125,
+          "p95": 2857.91015625,
+          "p99": 2859.47265625
+        },
+        "predecode_ns": {
+          "p50": 3488.76953125,
+          "p95": 5552.177734375,
+          "p99": 5935.201171875
+        },
+        "residual_decode_ns": {
+          "p50": 2072.119140625,
+          "p95": 2347.98828125,
+          "p99": 2396.08203125
+        },
+        "total_hybrid_ns": {
+          "p50": 5531.201171875,
+          "p95": 7900.166015625,
+          "p99": 8331.283203125
+        }
+      },
+      "single_window_ns": {
+        "A": {
+          "p50": 11550.0,
+          "p95": 29700.0,
+          "p99": 55610.99999999999
+        },
+        "B_scalar": {
+          "p50": 54300.0,
+          "p95": 134464.99999999994,
+          "p99": 218685.99999999983
+        }
+      }
+    },
+    {
+      "distance": 5,
+      "mode": "max2",
+      "shots": 30000,
+      "baseline_failures": 470,
+      "hybrid_failures": 470,
+      "baseline_ci": [
+        0.01432217106453202,
+        0.017135182825171937
+      ],
+      "hybrid_ci": [
+        0.01432217106453202,
+        0.017135182825171937
+      ],
+      "paired_delta": 0.0,
+      "paired_delta_ci": [
+        -0.00014605688714328297,
+        0.00014605688714328297
+      ],
+      "baseline_only": 0,
+      "hybrid_only": 0,
+      "original_events": 253983,
+      "residual_events": 251895,
+      "dense_bytes": 960000,
+      "sparse_baseline_bytes": 1525932,
+      "sparse_hybrid_bytes": 1517580,
+      "adaptive_baseline_bytes": 967775,
+      "adaptive_hybrid_bytes": 959423,
+      "batch_per_window_ns": {
+        "baseline_ns": {
+          "p50": 2743.212890625,
+          "p95": 3897.3828125,
+          "p99": 3947.953125
+        },
+        "predecode_ns": {
+          "p50": 3772.607421875,
+          "p95": 8367.5,
+          "p99": 9007.015625
+        },
+        "residual_decode_ns": {
+          "p50": 2708.837890625,
+          "p95": 2749.892578125,
+          "p99": 2751.072265625
+        },
+        "total_hybrid_ns": {
+          "p50": 6516.6015625,
+          "p95": 10841.9140625,
+          "p99": 11426.0390625
+        }
+      },
+      "single_window_ns": {
+        "A": {
+          "p50": 9800.0,
+          "p95": 17704.999999999996,
+          "p99": 28502.0
+        },
+        "B_scalar": {
+          "p50": 13100.0,
+          "p95": 43529.99999999997,
+          "p99": 67734.99999999997
+        }
+      }
+    },
+    {
+      "distance": 7,
+      "mode": "isolated",
+      "shots": 30000,
+      "baseline_failures": 354,
+      "hybrid_failures": 381,
+      "baseline_ci": [
+        0.010639043012098622,
+        0.013085967660207243
+      ],
+      "hybrid_ci": [
+        0.01149382731178437,
+        0.014030952902502083
+      ],
+      "paired_delta": 0.0009,
+      "paired_delta_ci": [
+        5.6174463365213584e-05,
+        0.0017405286270860154
+      ],
+      "baseline_only": 17,
+      "hybrid_only": 44,
+      "original_events": 758287,
+      "residual_events": 453161,
+      "dense_bytes": 1770000,
+      "sparse_baseline_bytes": 3543148,
+      "sparse_hybrid_bytes": 2322644,
+      "adaptive_baseline_bytes": 1796884,
+      "adaptive_hybrid_bytes": 1655408,
+      "batch_per_window_ns": {
+        "baseline_ns": {
+          "p50": 15819.921875,
+          "p95": 18924.3359375,
+          "p99": 19195.4140625
+        },
+        "predecode_ns": {
+          "p50": 22840.4296875,
+          "p95": 33077.158203125,
+          "p99": 34948.517578125
+        },
+        "residual_decode_ns": {
+          "p50": 11887.060546875,
+          "p95": 13790.009765625,
+          "p99": 13984.994140625
+        },
+        "total_hybrid_ns": {
+          "p50": 36379.736328125,
+          "p95": 45149.82421875,
+          "p99": 46872.69921875
+        }
+      },
+      "single_window_ns": {
+        "A": {
+          "p50": 52300.0,
+          "p95": 126519.99999999999,
+          "p99": 219322.99999999997
+        },
+        "B_scalar": {
+          "p50": 356900.0,
+          "p95": 583164.9999999999,
+          "p99": 800795.9999999998
+        }
+      }
+    },
+    {
+      "distance": 7,
+      "mode": "max2",
+      "shots": 30000,
+      "baseline_failures": 354,
+      "hybrid_failures": 354,
+      "baseline_ci": [
+        0.010639043012098622,
+        0.013085967660207243
+      ],
+      "hybrid_ci": [
+        0.010639043012098622,
+        0.013085967660207243
+      ],
+      "paired_delta": 0.0,
+      "paired_delta_ci": [
+        -0.00014605688714328297,
+        0.00014605688714328297
+      ],
+      "baseline_only": 0,
+      "hybrid_only": 0,
+      "original_events": 758287,
+      "residual_events": 758283,
+      "dense_bytes": 1770000,
+      "sparse_baseline_bytes": 3543148,
+      "sparse_hybrid_bytes": 3543132,
+      "adaptive_baseline_bytes": 1796884,
+      "adaptive_hybrid_bytes": 1796868,
+      "batch_per_window_ns": {
+        "baseline_ns": {
+          "p50": 17231.103515625,
+          "p95": 19135.80078125,
+          "p99": 19231.10546875
+        },
+        "predecode_ns": {
+          "p50": 33613.37890625,
+          "p95": 37421.806640625,
+          "p99": 37923.384765625
+        },
+        "residual_decode_ns": {
+          "p50": 16365.966796875,
+          "p95": 19330.13671875,
+          "p99": 19883.25390625
+        },
+        "total_hybrid_ns": {
+          "p50": 49979.345703125,
+          "p95": 56751.943359375,
+          "p99": 57806.638671875
+        }
+      },
+      "single_window_ns": {
+        "A": {
+          "p50": 48700.0,
+          "p95": 91749.99999999996,
+          "p99": 159342.99999999997
+        },
+        "B_scalar": {
+          "p50": 64750.0,
+          "p95": 132784.9999999999,
+          "p99": 286385.9999999998
+        }
+      }
+    }
+  ]
+}

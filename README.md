@@ -1,87 +1,115 @@
 # Real-Time Quantum Error Correction Decoder
 
-Research question: can a hardware-friendly local predecoder reduce downstream
-MWPM work and communication while retaining acceptable logical accuracy?
+A reproducible surface-code decoder study with a DEM-supported local predecoder
+and verified SystemVerilog prototype. **The first M0–M6 study is implemented and
+measured.** It found communication savings, but no CPU speedup and some logical
+accuracy degradation. There are no physical FPGA performance or power claims.
 
-**Current scope: M1 baseline and preliminary M2–M4 checkpoints implemented.**
-See [project status](reports/PROJECT_STATUS.md) for commands, measured results and
-remaining acceptance work. M5 now includes a verified fixed-graph RTL prototype;
-M6's final study remains incomplete. See [hardware instructions](rtl/README.md)
-and [M5 report](reports/milestones/M5.md) for reproduction and measured evidence.
+Read the [final report](reports/final_report.md), [status](reports/PROJECT_STATUS.md)
+and [measurement methods](docs/research_methods.md).
 
-## See actual simulation results
+## See a result quickly
+
+From this folder in Windows PowerShell:
 
 ```powershell
 .\.venv\Scripts\python.exe -m qec_project demo --distance 3 --rounds 3 --p 0.005 --shots 1000 --seed 42
-.\.venv\Scripts\python.exe -m qec_project sweep --config configs/smoke.json
 ```
 
-The program prints a results folder containing stats.csv, a plot, a manifest and
-per-point circuit/DEM/config/sample files. The sweep currently fixes X/Z,
-d=3/5/7, rounds=d and p=.001/.003/.005; shots/seed/output come from the config.
-The demo's --p applies to each of the four noise channels. Logical failure rate
-means the fraction of whole memory experiments whose observable was predicted
-incorrectly. Error bars show 95% Wilson intervals; zero failures is still uncertain.
-`--crosscheck` compares the same samples through Sinter's PyMatching adapter.
-See reports/milestones/M1.md for evidence and limitations. These plots are not
-threshold claims or hardware performance results.
+It prints a results directory containing CSV, a plot, circuit/DEM/config files
+and samples. Logical failure probability is the fraction of whole memory windows
+with an incorrect observable prediction, not a physical-gate or per-round error
+rate. Error bars reflect sampling uncertainty. Zero observed failures is not perfect correction.
 
-## Install and run
+![Actual serialized communication](reports/evidence/M6/figures/communication.png)
 
-Use Python 3.11 or newer. On Windows, create a virtual environment using an
-installed Python executable (`py -3` or its full path if `python` is unavailable):
+## Reproduce
+
+```powershell
+# Small software pipeline check, including tests and control experiments:
+.\.venv\Scripts\python.exe scripts/reproduce.py --smoke --software-only
+
+# Full study, independent Sinter check, selected RTL/synthesis, retiming and queues:
+.\.venv\Scripts\python.exe scripts/reproduce.py
+
+# Configurable software matrix only:
+.\.venv\Scripts\python.exe -m qec_project study --config configs/research.json
+```
+
+The full run is larger than the demo: 36 points with 30,000 shots each, two local
+policies, X/Z bases, d=3/5/7, rounds=d/2d and three noise levels. Hardware steps
+require WSL2 Ubuntu with Verilator/Yosys/compiler. They run from Windows through
+WSL without switching desktops. `--software-only` skips fresh RTL runs; archived
+hardware charts then remain reference evidence. See [hardware instructions](rtl/README.md).
+No GPU or FPGA purchase is required.
+
+`study` writes accuracy, byte counts and initial timings. The reproduction script
+also performs sequential retiming after builds/sampling stop and audits queues.
+Open PNGs in an image viewer, CSV in Excel, and JSON in an editor.
+
+## Install
+
+Use Python 3.11+; the recorded Windows environment uses 3.12.14. If `python` is an
+unavailable Windows alias, use `py -3` or an installed Python's full path.
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e '.[dev,research]'
 .\.venv\Scripts\python.exe -m pytest
 .\.venv\Scripts\python.exe -m qec_project --help
-.\.venv\Scripts\python.exe -m qec_project --smoke --config configs/smoke.json
 ```
 
-If the execution environment restricts the system temporary directory, use
-`python -m pytest --basetemp=results/pytest-temp -q` (pytest clears this test-only
-directory on subsequent runs).
+For tested pins on a compatible Python/platform, install requirements-lock.txt,
+then `pip install --no-deps -e .`. The Linux RTL-only environment has a separate
+requirements-rtl-lock.txt. Do not activate Windows .venv inside Ubuntu.
 
-After activation, `qec-project` is the equivalent console command. On Linux use
-`.venv/bin/python`. Run the example from the repository root. Config and output
-paths are relative to the current working directory. `research` installs the M1
-tools; M0 itself uses only Python's standard library. `dev` installs pytest.
+If this app restricts system temporary files:
 
-`requirements-lock.txt` records the validated environment; install it before
-`pip install --no-deps -e .` to reproduce those dependency versions on a compatible
-Python/platform. Package ranges in pyproject describe supported candidates;
-the lock records one tested resolution, not all possible environments.
+```powershell
+New-Item -ItemType Directory -Force results | Out-Null
+$env:TMP = (Resolve-Path results).Path
+$env:TEMP = $env:TMP
+.\.venv\Scripts\python.exe -m pytest --basetemp=results/pytest-temp -q
+```
 
-## Why these choices
+The reproduction script sets its own temporary location. pytest clears only its
+dedicated test directory on reruns. Generated samples, builds and environments
+are ignored; compact reviewed evidence is committed.
 
-- A small `src` package keeps reusable research code separate from outputs/tests.
-- JSON gives explicit, version-controlled configuration without a YAML parser.
-  Validation rejects unknown fields, invalid probabilities and unsupported modes.
-- Basis X/Z selects the future logical memory experiment; distance controls code
-  size and rounds controls the time extent. They are independent settings.
-- Noise fields match Stim's circuit generator names. Equal numeric values do not
-  imply a single aggregate physical error probability. See the
-  [Stim documentation](https://github.com/quantumlib/Stim) and
-  [PyMatching documentation](https://github.com/oscarhiggott/PyMatching).
-- The seed is stored for future sampling. Exact random samples may depend on
-  Stim version, execution environment and sampling calls; a seed alone is insufficient.
-- Each smoke run creates a unique `results/<id>/manifest.json`, preserving earlier
-  runs. It records OS, Python/package versions, config, seed, UTC time, Git commit
-  and working-tree status. Missing packages/Git are represented by null values.
-- Git commit plus dirty status distinguishes committed code from local edits.
-  Installed wheels outside a source checkout may have no Git provenance.
-- Results and virtual environments are ignored to keep commits reviewable.
-- No simulation is run by `--smoke`. Its manifest explicitly says so; it cannot
-  establish logical accuracy, decoding throughput, or hardware latency.
+## Architecture and interpretation
 
-## Layout and next milestone
+Stim generates noisy rotated surface-code memory experiments. Its detector
+events feed PyMatching MWPM. Local preprocessing selects disjoint unambiguous
+two-detector DEM mechanisms, XORs their support and records their logical frame.
+The combined prediction is `frame XOR MWPM(residual)`. Unsupported local cases
+remain for matching. Clearing detector bits without tracking the frame is invalid.
 
-`configs/` holds settings, `src/qec_project/` holds configuration/CLI code,
-`tests/` checks infrastructure, and `reports/milestones/` records acceptance evidence.
-MIT licensing permits reuse while retaining attribution.
+The unrestricted policy makes more decisions. The strict policy only preprocesses
+windows with at most two events. Both are heuristics; equal observed failures is
+not equivalence. A scalar Python golden rule, tested NumPy batch kernel, and
+generated fixed-graph RTL implement the same unrestricted rule. RTL buffers one
+complete output window; it is not a round-by-round quantum controller.
 
-The baseline now generates rotated X/Z memory circuits, samples detector events
-and actual observables, and scores PyMatching predictions. See the milestone
-reports for commands, acceptance evidence and limitations. The user has authorized
-sequential work through the roadmap; hardware verification needs its tool environment.
+Gate/data/measurement/reset noise is explicit. --p sets each channel, not an
+aggregate circuit error probability. Basis, distance and rounds are independent.
+Seeds, versions, saved samples, hashes and Git provenance support reproducibility;
+bitwise identity across tool versions/platforms is not promised.
+
+Batch CPU throughput, individual-window latency, modeled transport/queue time,
+RTL cycles and generic synthesis counts are separate metrics. No achieved FPGA
+frequency, physical speedup, target resource mapping or power is reported.
+
+## Other commands and layout
+
+- `--smoke --config configs/smoke.json`: infrastructure manifest only.
+- `demo`: one experiment; `sweep`: original fixed M1 grid.
+- `study --config ...`: configurable M6 software matrix.
+- `benchmark --replay RUN/0`: M2 workload replay on demo samples.
+- `compare --replay RUN/0`: original scalar M3 comparison.
+- `model --replay RUN/0`: original optimistic M4 batch-average queue model.
+
+Use M6's reproduction workflow for final queue conclusions, rather than treating
+M4 batch averages as single-window feedback latency. `src/qec_project/` contains
+research code, `configs/` settings, `tests/` correctness checks, `scripts/`
+reproduction tools, `rtl/` the hardware testbench/interface, and `reports/` results
+and milestone history. MIT licensing permits reuse with attribution.

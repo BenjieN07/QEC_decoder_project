@@ -1,0 +1,14 @@
+[
+  {
+    "shots": 30000,
+    "failures": 596,
+    "discards": 0,
+    "seconds": 0.031000000017229468,
+    "task_id": "f8c8a84b9f1473e258e5d387876adcd8ed5861b88d396fd4a66af898fb3b8bd7",
+    "ci": [
+      0.018317587640105,
+      0.021509674742886585
+    ],
+    "sampling": "Independent Sinter Monte Carlo; internal seed not user-controlled"
+  }
+]

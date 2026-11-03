@@ -1,0 +1,914 @@
+[
+  {
+    "basis": "X",
+    "distance": 3,
+    "rounds": 3,
+    "p": 0,
+    "seed": 6789021,
+    "shots": 10000,
+    "mode": "isolated",
+    "detectors": 24,
+    "edges": 0,
+    "baseline_failures": 0,
+    "hybrid_failures": 0,
+    "baseline_ci": [
+      0.0,
+      0.00038399837067659573
+    ],
+    "hybrid_ci": [
+      0.0,
+      0.00038399837067659573
+    ],
+    "baseline_only": 0,
+    "hybrid_only": 0,
+    "paired_delta": 0.0,
+    "paired_delta_ci": [
+      -0.00043810666670277817,
+      0.00043810666670277817
+    ],
+    "zero_failure_upper_bound_a": 0.0003688199146187622,
+    "zero_failure_upper_bound_b": 0.0003688199146187622,
+    "original_events": 0,
+    "residual_events": 0,
+    "dense_bytes": 200000,
+    "sparse_baseline_bytes": 170000,
+    "sparse_hybrid_bytes": 170000,
+    "adaptive_baseline_bytes": 180000,
+    "adaptive_hybrid_bytes": 180000,
+    "adaptive_encoding_note": "One format tag byte plus shorter of the two actually serialized records",
+    "serialize_baseline_dense_and_sparse_ns": 110796300,
+    "serialize_hybrid_sparse_ns": 90819800,
+    "setup_ns": 230400,
+    "graph_ns": 210300,
+    "sampling_ns": 2821900,
+    "batch_timing_shots": 2048,
+    "trials": [
+      {
+        "baseline_ns": 62.98828125,
+        "predecode_ns": 64.2578125,
+        "residual_decode_ns": 84.765625,
+        "total_hybrid_ns": 149.0234375
+      },
+      {
+        "baseline_ns": 66.845703125,
+        "predecode_ns": 52.685546875,
+        "residual_decode_ns": 51.708984375,
+        "total_hybrid_ns": 104.39453125
+      },
+      {
+        "baseline_ns": 62.20703125,
+        "predecode_ns": 56.005859375,
+        "residual_decode_ns": 74.462890625,
+        "total_hybrid_ns": 130.46875
+      },
+      {
+        "baseline_ns": 108.203125,
+        "predecode_ns": 47.94921875,
+        "residual_decode_ns": 74.560546875,
+        "total_hybrid_ns": 122.509765625
+      },
+      {
+        "baseline_ns": 77.392578125,
+        "predecode_ns": 104.00390625,
+        "residual_decode_ns": 72.94921875,
+        "total_hybrid_ns": 176.953125
+      }
+    ],
+    "batch_per_window_ns": {
+      "baseline_ns": {
+        "p50": 66.845703125,
+        "p95": 102.041015625,
+        "p99": 106.970703125
+      },
+      "predecode_ns": {
+        "p50": 56.005859375,
+        "p95": 96.0546875,
+        "p99": 102.4140625
+      },
+      "residual_decode_ns": {
+        "p50": 74.462890625,
+        "p95": 82.724609375,
+        "p99": 84.357421875
+      },
+      "total_hybrid_ns": {
+        "p50": 130.46875,
+        "p95": 171.3671875,
+        "p99": 175.8359375
+      }
+    },
+    "single_window_ns": {
+      "A": {
+        "p50": 27700.0,
+        "p95": 61079.99999999993,
+        "p99": 123133.99999999997
+      },
+      "B_scalar": {
+        "p50": 38500.0,
+        "p95": 90309.99999999999,
+        "p99": 180584.9999999999
+      }
+    },
+    "single_window_samples": 1000,
+    "timing_scope": "Batch amortized: excludes sampling/setup/serialization. Individual windows: scalar predecode+serialize+decode; excludes sampling/transport/queue.",
+    "circuit_sha256": "45e7cf1ce6d06cb2d09c08223364c1cc0a3ba00b6b1439b9d4c189d8538478f6",
+    "dem_sha256": "dcf4f97b10fc65dffef07e982a7a7b1e28cd711a4cdabe0514138c6574cbcce3"
+  },
+  {
+    "basis": "X",
+    "distance": 3,
+    "rounds": 3,
+    "p": 0,
+    "seed": 6789021,
+    "shots": 10000,
+    "mode": "max2",
+    "detectors": 24,
+    "edges": 0,
+    "baseline_failures": 0,
+    "hybrid_failures": 0,
+    "baseline_ci": [
+      0.0,
+      0.00038399837067659573
+    ],
+    "hybrid_ci": [
+      0.0,
+      0.00038399837067659573
+    ],
+    "baseline_only": 0,
+    "hybrid_only": 0,
+    "paired_delta": 0.0,
+    "paired_delta_ci": [
+      -0.00043810666670277817,
+      0.00043810666670277817
+    ],
+    "zero_failure_upper_bound_a": 0.0003688199146187622,
+    "zero_failure_upper_bound_b": 0.0003688199146187622,
+    "original_events": 0,
+    "residual_events": 0,
+    "dense_bytes": 200000,
+    "sparse_baseline_bytes": 170000,
+    "sparse_hybrid_bytes": 170000,
+    "adaptive_baseline_bytes": 180000,
+    "adaptive_hybrid_bytes": 180000,
+    "adaptive_encoding_note": "One format tag byte plus shorter of the two actually serialized records",
+    "serialize_baseline_dense_and_sparse_ns": 110796300,
+    "serialize_hybrid_sparse_ns": 104083200,
+    "setup_ns": 230400,
+    "graph_ns": 210300,
+    "sampling_ns": 2821900,
+    "batch_timing_shots": 2048,
+    "trials": [
+      {
+        "baseline_ns": 80.126953125,
+        "predecode_ns": 140.576171875,
+        "residual_decode_ns": 90.72265625,
+        "total_hybrid_ns": 231.298828125
+      },
+      {
+        "baseline_ns": 91.2109375,
+        "predecode_ns": 125.0,
+        "residual_decode_ns": 95.5078125,
+        "total_hybrid_ns": 220.5078125
+      },
+      {
+        "baseline_ns": 80.859375,
+        "predecode_ns": 116.650390625,
+        "residual_decode_ns": 110.05859375,
+        "total_hybrid_ns": 226.708984375
+      },
+      {
+        "baseline_ns": 92.138671875,
+        "predecode_ns": 129.58984375,
+        "residual_decode_ns": 86.62109375,
+        "total_hybrid_ns": 216.2109375
+      },
+      {
+        "baseline_ns": 80.810546875,
+        "predecode_ns": 122.802734375,
+        "residual_decode_ns": 87.548828125,
+        "total_hybrid_ns": 210.3515625
+      }
+    ],
+    "batch_per_window_ns": {
+      "baseline_ns": {
+        "p50": 80.859375,
+        "p95": 91.953125,
+        "p99": 92.1015625
+      },
+      "predecode_ns": {
+        "p50": 125.0,
+        "p95": 138.37890625,
+        "p99": 140.13671875
+      },
+      "residual_decode_ns": {
+        "p50": 90.72265625,
+        "p95": 107.1484375,
+        "p99": 109.4765625
+      },
+      "total_hybrid_ns": {
+        "p50": 220.5078125,
+        "p95": 230.380859375,
+        "p99": 231.115234375
+      }
+    },
+    "single_window_ns": {
+      "A": {
+        "p50": 10000.0,
+        "p95": 48300.0,
+        "p99": 70002.0
+      },
+      "B_scalar": {
+        "p50": 15800.0,
+        "p95": 76859.99999999994,
+        "p99": 109369.99999999994
+      }
+    },
+    "single_window_samples": 1000,
+    "timing_scope": "Batch amortized: excludes sampling/setup/serialization. Individual windows: scalar predecode+serialize+decode; excludes sampling/transport/queue.",
+    "circuit_sha256": "45e7cf1ce6d06cb2d09c08223364c1cc0a3ba00b6b1439b9d4c189d8538478f6",
+    "dem_sha256": "dcf4f97b10fc65dffef07e982a7a7b1e28cd711a4cdabe0514138c6574cbcce3"
+  },
+  {
+    "basis": "X",
+    "distance": 3,
+    "rounds": 3,
+    "p": 0.1,
+    "seed": 6893750,
+    "shots": 10000,
+    "mode": "isolated",
+    "detectors": 24,
+    "edges": 54,
+    "baseline_failures": 4941,
+    "hybrid_failures": 4965,
+    "baseline_ci": [
+      0.48430500930003884,
+      0.5038995218807351
+    ],
+    "hybrid_ci": [
+      0.4867036457699474,
+      0.5062990422186472
+    ],
+    "baseline_only": 362,
+    "hybrid_only": 386,
+    "paired_delta": 0.0024,
+    "paired_delta_ci": [
+      -0.006208098498786237,
+      0.011006138524593173
+    ],
+    "zero_failure_upper_bound_a": null,
+    "zero_failure_upper_bound_b": null,
+    "original_events": 110341,
+    "residual_events": 99977,
+    "dense_bytes": 200000,
+    "sparse_baseline_bytes": 611364,
+    "sparse_hybrid_bytes": 569908,
+    "adaptive_baseline_bytes": 210000,
+    "adaptive_hybrid_bytes": 209973,
+    "adaptive_encoding_note": "One format tag byte plus shorter of the two actually serialized records",
+    "serialize_baseline_dense_and_sparse_ns": 116851900,
+    "serialize_hybrid_sparse_ns": 55226500,
+    "setup_ns": 1703400,
+    "graph_ns": 6420600,
+    "sampling_ns": 8039500,
+    "batch_timing_shots": 2048,
+    "trials": [
+      {
+        "baseline_ns": 4520.41015625,
+        "predecode_ns": 816.943359375,
+        "residual_decode_ns": 4090.869140625,
+        "total_hybrid_ns": 4907.8125
+      },
+      {
+        "baseline_ns": 5555.517578125,
+        "predecode_ns": 779.19921875,
+        "residual_decode_ns": 6699.90234375,
+        "total_hybrid_ns": 7479.1015625
+      },
+      {
+        "baseline_ns": 4251.5625,
+        "predecode_ns": 765.52734375,
+        "residual_decode_ns": 4768.5546875,
+        "total_hybrid_ns": 5534.08203125
+      },
+      {
+        "baseline_ns": 4101.7578125,
+        "predecode_ns": 742.822265625,
+        "residual_decode_ns": 3818.115234375,
+        "total_hybrid_ns": 4560.9375
+      },
+      {
+        "baseline_ns": 4096.19140625,
+        "predecode_ns": 728.515625,
+        "residual_decode_ns": 3829.39453125,
+        "total_hybrid_ns": 4557.91015625
+      }
+    ],
+    "batch_per_window_ns": {
+      "baseline_ns": {
+        "p50": 4251.5625,
+        "p95": 5348.49609375,
+        "p99": 5514.11328125
+      },
+      "predecode_ns": {
+        "p50": 765.52734375,
+        "p95": 809.39453125,
+        "p99": 815.43359375
+      },
+      "residual_decode_ns": {
+        "p50": 4090.869140625,
+        "p95": 6313.6328125,
+        "p99": 6622.6484375
+      },
+      "total_hybrid_ns": {
+        "p50": 4907.8125,
+        "p95": 7090.09765625,
+        "p99": 7401.30078125
+      }
+    },
+    "single_window_ns": {
+      "A": {
+        "p50": 11900.0,
+        "p95": 15004.999999999996,
+        "p99": 18006.999999999993
+      },
+      "B_scalar": {
+        "p50": 23100.0,
+        "p95": 30100.0,
+        "p99": 38041.99999999996
+      }
+    },
+    "single_window_samples": 1000,
+    "timing_scope": "Batch amortized: excludes sampling/setup/serialization. Individual windows: scalar predecode+serialize+decode; excludes sampling/transport/queue.",
+    "circuit_sha256": "d71df7ef27c1e5368100f538899e0a23015135eadc81aaabf81913ecbff4372e",
+    "dem_sha256": "064fcf23c3f8a2b9e0e6d883824f5aa98c8020a4aa79f5e0e224821d015464a8"
+  },
+  {
+    "basis": "X",
+    "distance": 3,
+    "rounds": 3,
+    "p": 0.1,
+    "seed": 6893750,
+    "shots": 10000,
+    "mode": "max2",
+    "detectors": 24,
+    "edges": 54,
+    "baseline_failures": 4941,
+    "hybrid_failures": 4941,
+    "baseline_ci": [
+      0.48430500930003884,
+      0.5038995218807351
+    ],
+    "hybrid_ci": [
+      0.48430500930003884,
+      0.5038995218807351
+    ],
+    "baseline_only": 0,
+    "hybrid_only": 0,
+    "paired_delta": 0.0,
+    "paired_delta_ci": [
+      -0.00043810666670277817,
+      0.00043810666670277817
+    ],
+    "zero_failure_upper_bound_a": null,
+    "zero_failure_upper_bound_b": null,
+    "original_events": 110341,
+    "residual_events": 110341,
+    "dense_bytes": 200000,
+    "sparse_baseline_bytes": 611364,
+    "sparse_hybrid_bytes": 611364,
+    "adaptive_baseline_bytes": 210000,
+    "adaptive_hybrid_bytes": 210000,
+    "adaptive_encoding_note": "One format tag byte plus shorter of the two actually serialized records",
+    "serialize_baseline_dense_and_sparse_ns": 116851900,
+    "serialize_hybrid_sparse_ns": 34980000,
+    "setup_ns": 1703400,
+    "graph_ns": 6420600,
+    "sampling_ns": 8039500,
+    "batch_timing_shots": 2048,
+    "trials": [
+      {
+        "baseline_ns": 6266.943359375,
+        "predecode_ns": 1348.73046875,
+        "residual_decode_ns": 4378.564453125,
+        "total_hybrid_ns": 5727.294921875
+      },
+      {
+        "baseline_ns": 4110.05859375,
+        "predecode_ns": 754.39453125,
+        "residual_decode_ns": 4098.779296875,
+        "total_hybrid_ns": 4853.173828125
+      },
+      {
+        "baseline_ns": 4034.66796875,
+        "predecode_ns": 770.849609375,
+        "residual_decode_ns": 4444.580078125,
+        "total_hybrid_ns": 5215.4296875
+      },
+      {
+        "baseline_ns": 4169.82421875,
+        "predecode_ns": 751.318359375,
+        "residual_decode_ns": 5193.9453125,
+        "total_hybrid_ns": 5945.263671875
+      },
+      {
+        "baseline_ns": 4825.537109375,
+        "predecode_ns": 1843.65234375,
+        "residual_decode_ns": 6265.869140625,
+        "total_hybrid_ns": 8109.521484375
+      }
+    ],
+    "batch_per_window_ns": {
+      "baseline_ns": {
+        "p50": 4169.82421875,
+        "p95": 5978.662109375,
+        "p99": 6209.287109375
+      },
+      "predecode_ns": {
+        "p50": 770.849609375,
+        "p95": 1744.66796875,
+        "p99": 1823.85546875
+      },
+      "residual_decode_ns": {
+        "p50": 4444.580078125,
+        "p95": 6051.484375,
+        "p99": 6222.9921875
+      },
+      "total_hybrid_ns": {
+        "p50": 5727.294921875,
+        "p95": 7676.669921875,
+        "p99": 8022.951171875
+      }
+    },
+    "single_window_ns": {
+      "A": {
+        "p50": 12000.0,
+        "p95": 30704.999999999996,
+        "p99": 63429.99999999997
+      },
+      "B_scalar": {
+        "p50": 14700.0,
+        "p95": 42700.0,
+        "p99": 82615.99999999999
+      }
+    },
+    "single_window_samples": 1000,
+    "timing_scope": "Batch amortized: excludes sampling/setup/serialization. Individual windows: scalar predecode+serialize+decode; excludes sampling/transport/queue.",
+    "circuit_sha256": "d71df7ef27c1e5368100f538899e0a23015135eadc81aaabf81913ecbff4372e",
+    "dem_sha256": "064fcf23c3f8a2b9e0e6d883824f5aa98c8020a4aa79f5e0e224821d015464a8"
+  },
+  {
+    "basis": "Z",
+    "distance": 3,
+    "rounds": 3,
+    "p": 0,
+    "seed": 6998479,
+    "shots": 10000,
+    "mode": "isolated",
+    "detectors": 24,
+    "edges": 0,
+    "baseline_failures": 0,
+    "hybrid_failures": 0,
+    "baseline_ci": [
+      0.0,
+      0.00038399837067659573
+    ],
+    "hybrid_ci": [
+      0.0,
+      0.00038399837067659573
+    ],
+    "baseline_only": 0,
+    "hybrid_only": 0,
+    "paired_delta": 0.0,
+    "paired_delta_ci": [
+      -0.00043810666670277817,
+      0.00043810666670277817
+    ],
+    "zero_failure_upper_bound_a": 0.0003688199146187622,
+    "zero_failure_upper_bound_b": 0.0003688199146187622,
+    "original_events": 0,
+    "residual_events": 0,
+    "dense_bytes": 200000,
+    "sparse_baseline_bytes": 170000,
+    "sparse_hybrid_bytes": 170000,
+    "adaptive_baseline_bytes": 180000,
+    "adaptive_hybrid_bytes": 180000,
+    "adaptive_encoding_note": "One format tag byte plus shorter of the two actually serialized records",
+    "serialize_baseline_dense_and_sparse_ns": 73183800,
+    "serialize_hybrid_sparse_ns": 73992600,
+    "setup_ns": 225400,
+    "graph_ns": 274400,
+    "sampling_ns": 658000,
+    "batch_timing_shots": 2048,
+    "trials": [
+      {
+        "baseline_ns": 32.470703125,
+        "predecode_ns": 26.46484375,
+        "residual_decode_ns": 44.091796875,
+        "total_hybrid_ns": 70.556640625
+      },
+      {
+        "baseline_ns": 34.423828125,
+        "predecode_ns": 24.658203125,
+        "residual_decode_ns": 34.5703125,
+        "total_hybrid_ns": 59.228515625
+      },
+      {
+        "baseline_ns": 33.740234375,
+        "predecode_ns": 23.4375,
+        "residual_decode_ns": 35.888671875,
+        "total_hybrid_ns": 59.326171875
+      },
+      {
+        "baseline_ns": 31.884765625,
+        "predecode_ns": 23.4375,
+        "residual_decode_ns": 33.740234375,
+        "total_hybrid_ns": 57.177734375
+      },
+      {
+        "baseline_ns": 31.54296875,
+        "predecode_ns": 23.4375,
+        "residual_decode_ns": 35.7421875,
+        "total_hybrid_ns": 59.1796875
+      }
+    ],
+    "batch_per_window_ns": {
+      "baseline_ns": {
+        "p50": 32.470703125,
+        "p95": 34.287109375,
+        "p99": 34.396484375
+      },
+      "predecode_ns": {
+        "p50": 23.4375,
+        "p95": 26.103515625,
+        "p99": 26.392578125
+      },
+      "residual_decode_ns": {
+        "p50": 35.7421875,
+        "p95": 42.451171875,
+        "p99": 43.763671875
+      },
+      "total_hybrid_ns": {
+        "p50": 59.228515625,
+        "p95": 68.310546875,
+        "p99": 70.107421875
+      }
+    },
+    "single_window_ns": {
+      "A": {
+        "p50": 7900.0,
+        "p95": 8600.0,
+        "p99": 10601.0
+      },
+      "B_scalar": {
+        "p50": 10600.0,
+        "p95": 11604.999999999996,
+        "p99": 16708.999999999993
+      }
+    },
+    "single_window_samples": 1000,
+    "timing_scope": "Batch amortized: excludes sampling/setup/serialization. Individual windows: scalar predecode+serialize+decode; excludes sampling/transport/queue.",
+    "circuit_sha256": "169e6e44081915cbd99ae6945a4d648b415bfd8987b4440dd8234303528fe522",
+    "dem_sha256": "a52700a4dc47e26413a7497d6cc32b715b4456602b1c615758d724f1ee2f3c5d"
+  },
+  {
+    "basis": "Z",
+    "distance": 3,
+    "rounds": 3,
+    "p": 0,
+    "seed": 6998479,
+    "shots": 10000,
+    "mode": "max2",
+    "detectors": 24,
+    "edges": 0,
+    "baseline_failures": 0,
+    "hybrid_failures": 0,
+    "baseline_ci": [
+      0.0,
+      0.00038399837067659573
+    ],
+    "hybrid_ci": [
+      0.0,
+      0.00038399837067659573
+    ],
+    "baseline_only": 0,
+    "hybrid_only": 0,
+    "paired_delta": 0.0,
+    "paired_delta_ci": [
+      -0.00043810666670277817,
+      0.00043810666670277817
+    ],
+    "zero_failure_upper_bound_a": 0.0003688199146187622,
+    "zero_failure_upper_bound_b": 0.0003688199146187622,
+    "original_events": 0,
+    "residual_events": 0,
+    "dense_bytes": 200000,
+    "sparse_baseline_bytes": 170000,
+    "sparse_hybrid_bytes": 170000,
+    "adaptive_baseline_bytes": 180000,
+    "adaptive_hybrid_bytes": 180000,
+    "adaptive_encoding_note": "One format tag byte plus shorter of the two actually serialized records",
+    "serialize_baseline_dense_and_sparse_ns": 73183800,
+    "serialize_hybrid_sparse_ns": 38509800,
+    "setup_ns": 225400,
+    "graph_ns": 274400,
+    "sampling_ns": 658000,
+    "batch_timing_shots": 2048,
+    "trials": [
+      {
+        "baseline_ns": 32.470703125,
+        "predecode_ns": 48.779296875,
+        "residual_decode_ns": 37.451171875,
+        "total_hybrid_ns": 86.23046875
+      },
+      {
+        "baseline_ns": 52.197265625,
+        "predecode_ns": 57.666015625,
+        "residual_decode_ns": 37.548828125,
+        "total_hybrid_ns": 95.21484375
+      },
+      {
+        "baseline_ns": 32.2265625,
+        "predecode_ns": 49.560546875,
+        "residual_decode_ns": 33.10546875,
+        "total_hybrid_ns": 82.666015625
+      },
+      {
+        "baseline_ns": 31.4453125,
+        "predecode_ns": 45.21484375,
+        "residual_decode_ns": 34.86328125,
+        "total_hybrid_ns": 80.078125
+      },
+      {
+        "baseline_ns": 31.640625,
+        "predecode_ns": 44.970703125,
+        "residual_decode_ns": 32.763671875,
+        "total_hybrid_ns": 77.734375
+      }
+    ],
+    "batch_per_window_ns": {
+      "baseline_ns": {
+        "p50": 32.2265625,
+        "p95": 48.251953125,
+        "p99": 51.408203125
+      },
+      "predecode_ns": {
+        "p50": 48.779296875,
+        "p95": 56.044921875,
+        "p99": 57.341796875
+      },
+      "residual_decode_ns": {
+        "p50": 34.86328125,
+        "p95": 37.529296875,
+        "p99": 37.544921875
+      },
+      "total_hybrid_ns": {
+        "p50": 82.666015625,
+        "p95": 93.41796875,
+        "p99": 94.85546875
+      }
+    },
+    "single_window_ns": {
+      "A": {
+        "p50": 7900.0,
+        "p95": 27500.0,
+        "p99": 65218.999999999985
+      },
+      "B_scalar": {
+        "p50": 12200.0,
+        "p95": 53604.99999999999,
+        "p99": 90762.99999999994
+      }
+    },
+    "single_window_samples": 1000,
+    "timing_scope": "Batch amortized: excludes sampling/setup/serialization. Individual windows: scalar predecode+serialize+decode; excludes sampling/transport/queue.",
+    "circuit_sha256": "169e6e44081915cbd99ae6945a4d648b415bfd8987b4440dd8234303528fe522",
+    "dem_sha256": "a52700a4dc47e26413a7497d6cc32b715b4456602b1c615758d724f1ee2f3c5d"
+  },
+  {
+    "basis": "Z",
+    "distance": 3,
+    "rounds": 3,
+    "p": 0.1,
+    "seed": 7103208,
+    "shots": 10000,
+    "mode": "isolated",
+    "detectors": 24,
+    "edges": 54,
+    "baseline_failures": 4867,
+    "hybrid_failures": 4876,
+    "baseline_ci": [
+      0.47691063459014893,
+      0.49649957976651105
+    ],
+    "hybrid_ci": [
+      0.4778098357632158,
+      0.49739968739637686
+    ],
+    "baseline_only": 388,
+    "hybrid_only": 397,
+    "paired_delta": 0.0009,
+    "paired_delta_ci": [
+      -0.007907808711873986,
+      0.009707078567300131
+    ],
+    "zero_failure_upper_bound_a": null,
+    "zero_failure_upper_bound_b": null,
+    "original_events": 108840,
+    "residual_events": 98592,
+    "dense_bytes": 200000,
+    "sparse_baseline_bytes": 605360,
+    "sparse_hybrid_bytes": 564368,
+    "adaptive_baseline_bytes": 210000,
+    "adaptive_hybrid_bytes": 209961,
+    "adaptive_encoding_note": "One format tag byte plus shorter of the two actually serialized records",
+    "serialize_baseline_dense_and_sparse_ns": 55361500,
+    "serialize_hybrid_sparse_ns": 32295800,
+    "setup_ns": 1389100,
+    "graph_ns": 5079400,
+    "sampling_ns": 7161300,
+    "batch_timing_shots": 2048,
+    "trials": [
+      {
+        "baseline_ns": 5390.13671875,
+        "predecode_ns": 2025.146484375,
+        "residual_decode_ns": 4222.4609375,
+        "total_hybrid_ns": 6247.607421875
+      },
+      {
+        "baseline_ns": 5328.7109375,
+        "predecode_ns": 743.9453125,
+        "residual_decode_ns": 3992.626953125,
+        "total_hybrid_ns": 4736.572265625
+      },
+      {
+        "baseline_ns": 5946.044921875,
+        "predecode_ns": 1861.23046875,
+        "residual_decode_ns": 5174.072265625,
+        "total_hybrid_ns": 7035.302734375
+      },
+      {
+        "baseline_ns": 5953.564453125,
+        "predecode_ns": 1854.4921875,
+        "residual_decode_ns": 5743.1640625,
+        "total_hybrid_ns": 7597.65625
+      },
+      {
+        "baseline_ns": 4356.298828125,
+        "predecode_ns": 770.3125,
+        "residual_decode_ns": 4893.45703125,
+        "total_hybrid_ns": 5663.76953125
+      }
+    ],
+    "batch_per_window_ns": {
+      "baseline_ns": {
+        "p50": 5390.13671875,
+        "p95": 5952.060546875,
+        "p99": 5953.263671875
+      },
+      "predecode_ns": {
+        "p50": 1854.4921875,
+        "p95": 1992.36328125,
+        "p99": 2018.58984375
+      },
+      "residual_decode_ns": {
+        "p50": 4893.45703125,
+        "p95": 5629.345703125,
+        "p99": 5720.400390625
+      },
+      "total_hybrid_ns": {
+        "p50": 6247.607421875,
+        "p95": 7485.185546875,
+        "p99": 7575.162109375
+      }
+    },
+    "single_window_ns": {
+      "A": {
+        "p50": 11900.0,
+        "p95": 35914.999999999985,
+        "p99": 66504.0
+      },
+      "B_scalar": {
+        "p50": 23800.0,
+        "p95": 84339.99999999997,
+        "p99": 161967.99999999994
+      }
+    },
+    "single_window_samples": 1000,
+    "timing_scope": "Batch amortized: excludes sampling/setup/serialization. Individual windows: scalar predecode+serialize+decode; excludes sampling/transport/queue.",
+    "circuit_sha256": "fdd1997b29dc34b801fe4a7e11560da7157e9d4aab1d5fd8f6a05536a7caa64e",
+    "dem_sha256": "fa21371bb3c8f797eeed7779f55c8b030245518ac41b3e61263fe62652df71ab"
+  },
+  {
+    "basis": "Z",
+    "distance": 3,
+    "rounds": 3,
+    "p": 0.1,
+    "seed": 7103208,
+    "shots": 10000,
+    "mode": "max2",
+    "detectors": 24,
+    "edges": 54,
+    "baseline_failures": 4867,
+    "hybrid_failures": 4867,
+    "baseline_ci": [
+      0.47691063459014893,
+      0.49649957976651105
+    ],
+    "hybrid_ci": [
+      0.47691063459014893,
+      0.49649957976651105
+    ],
+    "baseline_only": 0,
+    "hybrid_only": 0,
+    "paired_delta": 0.0,
+    "paired_delta_ci": [
+      -0.00043810666670277817,
+      0.00043810666670277817
+    ],
+    "zero_failure_upper_bound_a": null,
+    "zero_failure_upper_bound_b": null,
+    "original_events": 108840,
+    "residual_events": 108840,
+    "dense_bytes": 200000,
+    "sparse_baseline_bytes": 605360,
+    "sparse_hybrid_bytes": 605360,
+    "adaptive_baseline_bytes": 210000,
+    "adaptive_hybrid_bytes": 210000,
+    "adaptive_encoding_note": "One format tag byte plus shorter of the two actually serialized records",
+    "serialize_baseline_dense_and_sparse_ns": 55361500,
+    "serialize_hybrid_sparse_ns": 31563100,
+    "setup_ns": 1389100,
+    "graph_ns": 5079400,
+    "sampling_ns": 7161300,
+    "batch_timing_shots": 2048,
+    "trials": [
+      {
+        "baseline_ns": 3486.23046875,
+        "predecode_ns": 730.17578125,
+        "residual_decode_ns": 3572.0703125,
+        "total_hybrid_ns": 4302.24609375
+      },
+      {
+        "baseline_ns": 3732.32421875,
+        "predecode_ns": 710.25390625,
+        "residual_decode_ns": 3485.400390625,
+        "total_hybrid_ns": 4195.654296875
+      },
+      {
+        "baseline_ns": 3536.9140625,
+        "predecode_ns": 718.359375,
+        "residual_decode_ns": 3893.5546875,
+        "total_hybrid_ns": 4611.9140625
+      },
+      {
+        "baseline_ns": 3438.76953125,
+        "predecode_ns": 695.3125,
+        "residual_decode_ns": 3419.53125,
+        "total_hybrid_ns": 4114.84375
+      },
+      {
+        "baseline_ns": 3500.9765625,
+        "predecode_ns": 760.05859375,
+        "residual_decode_ns": 5085.64453125,
+        "total_hybrid_ns": 5845.703125
+      }
+    ],
+    "batch_per_window_ns": {
+      "baseline_ns": {
+        "p50": 3500.9765625,
+        "p95": 3693.2421875,
+        "p99": 3724.5078125
+      },
+      "predecode_ns": {
+        "p50": 718.359375,
+        "p95": 754.08203125,
+        "p99": 758.86328125
+      },
+      "residual_decode_ns": {
+        "p50": 3572.0703125,
+        "p95": 4847.2265625,
+        "p99": 5037.9609375
+      },
+      "total_hybrid_ns": {
+        "p50": 4302.24609375,
+        "p95": 5598.9453125,
+        "p99": 5796.3515625
+      }
+    },
+    "single_window_ns": {
+      "A": {
+        "p50": 10500.0,
+        "p95": 13104.999999999996,
+        "p99": 21670.999999999935
+      },
+      "B_scalar": {
+        "p50": 13000.0,
+        "p95": 16104.999999999996,
+        "p99": 26109.999999999993
+      }
+    },
+    "single_window_samples": 1000,
+    "timing_scope": "Batch amortized: excludes sampling/setup/serialization. Individual windows: scalar predecode+serialize+decode; excludes sampling/transport/queue.",
+    "circuit_sha256": "fdd1997b29dc34b801fe4a7e11560da7157e9d4aab1d5fd8f6a05536a7caa64e",
+    "dem_sha256": "fa21371bb3c8f797eeed7779f55c8b030245518ac41b3e61263fe62652df71ab"
+  }
+]

@@ -28,5 +28,7 @@ for name in args.cases:
     target.mkdir(parents=True,exist_ok=True)
     for filename in ('local_predecoder.sv','model.dem','metadata.json','verification.xml','cycles.json','synthesis.log'):
         shutil.copy2(source/filename,target/filename)
+    if (source/'end_to_end.json').exists():
+        shutil.copy2(source/'end_to_end.json',target/'end_to_end.json')
 (args.output/'summary.json').write_text(json.dumps(rows,indent=2),encoding='utf-8')
 print([(r['basis'],r['distance'],r['cells'],r['register_bits']) for r in rows])

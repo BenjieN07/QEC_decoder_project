@@ -1,0 +1,16 @@
+{
+  "code_type": "rotated_surface_code",
+  "basis": "X",
+  "distance": 3,
+  "rounds": 6,
+  "noise": {
+    "after_clifford_depolarization": 0.005,
+    "before_round_data_depolarization": 0.005,
+    "before_measure_flip_probability": 0.005,
+    "after_reset_flip_probability": 0.005
+  },
+  "shots": 30000,
+  "seed": 20680019,
+  "output_dir": "results",
+  "decoder": "pymatching"
+}

@@ -46,6 +46,22 @@ establish reliable p99 batch variability. Raw trial times and separate scopes ar
 saved. Array bytes and process CPU time are recorded; array bytes are not RSS.
 The laptop is shared, unpinned and not a controlled hardware performance platform.
 
+The final evidence replaces initial timings with a separate sequential replay after
+sampling and hardware builds stop. Its revision is recorded separately in the
+manifest. Stage-level scalar timings include timer overhead. The queue replay uses
+these measured stage distributions in original shot order, one window per rounds
+arrival periods, with independent pipelined front-end, transfer and MWPM resources.
+Capacity includes each stage's in-service window. Simulated unlimited queues retain
+all work; exceeding configured capacity is reported as an infeasible finite-buffer
+schedule, not hidden drops. Window-fill time is included; terminal-measurement
+overhead beyond the supplied window interval is assumed zero.
+
+For C, only selected fixed graphs are functionally simulated. The extrapolated
+C_assumed queue rows replace preprocessing with an assumed 10 ns and retain
+measured CPU serialization/downstream services. These scenarios do not establish
+that any RTL graph can meet that clock, nor that the extrapolated graphs were
+verified. They are a sensitivity model and cannot be called measured speedups.
+
 RTL results are equivalent-function simulation for fixed graphs, not physical
 FPGA runs. One unstalled cycle is an architectural count. An assumed 10 ns period
 in queue scenarios is hypothetical and has not passed timing closure. Generic

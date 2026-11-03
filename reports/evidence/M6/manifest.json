@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "mode": "research_study",
+  "simulation_performed": true,
+  "created_utc": "2026-11-03T20:08:20.425443+00:00",
+  "config": {
+    "code_type": "rotated_surface_code",
+    "basis": "X",
+    "distance": 3,
+    "rounds": 3,
+    "noise": {
+      "after_clifford_depolarization": 0.005,
+      "before_round_data_depolarization": 0.005,
+      "before_measure_flip_probability": 0.005,
+      "after_reset_flip_probability": 0.005
+    },
+    "shots": 1000,
+    "seed": 42,
+    "output_dir": "results",
+    "decoder": "pymatching"
+  },
+  "seed": 42,
+  "os": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "python": "3.12.14",
+  "versions": {
+    "qec-project": "0.1.0",
+    "stim": "1.16.0",
+    "pymatching": "2.4.0",
+    "sinter": "1.16.0",
+    "numpy": "2.5.4",
+    "pytest": "9.2.0"
+  },
+  "git": {
+    "commit": "28f517e56d3ce4655afc8b3ebe2af6b5e6b61926",
+    "status_porcelain": ""
+  },
+  "study": {
+    "base_config": "configs/smoke.json",
+    "distances": [
+      3,
+      5,
+      7
+    ],
+    "bases": [
+      "X",
+      "Z"
+    ],
+    "probabilities": [
+      0.003,
+      0.005,
+      0.01
+    ],
+    "round_multipliers": [
+      1,
+      2
+    ],
+    "shots": 30000,
+    "seed": 20261103,
+    "timing_shots": 2048,
+    "timing_trials": 5,
+    "single_shots": 1000,
+    "event_limits": [
+      null,
+      2
+    ],
+    "arrival_periods_ns": [
+      1000,
+      10000,
+      100000
+    ],
+    "bandwidths_bits_per_second": [
+      100000000,
+      1000000000
+    ],
+    "deadline_ns": 1000000,
+    "queue_capacity_windows": 64,
+    "rtl_clock_period_ns_assumed": 10
+  },
+  "status": "complete",
+  "cpu_identifier": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "logical_cpus": 16,
+  "timing_environment": "Windows CPU; shared laptop; not pinned or isolated",
+  "retiming": {
+    "git": {
+      "commit": "8d0353f4fee8ac30f693dd2121a027063a09d688",
+      "status_porcelain": ""
+    },
+    "started_utc": "2026-11-03T20:16:31.257936+00:00",
+    "scope": "Sequential replay after study sampling and RTL builds; shared laptop remains unisolated"
+  }
+}

@@ -1,0 +1,254 @@
+[
+  {
+    "basis": "X",
+    "distance": 3,
+    "rounds": 3,
+    "detectors": 24,
+    "observables": 1,
+    "edges": 54,
+    "vectors": 31302,
+    "sample_start": 302,
+    "sample_count": 30000,
+    "replay": "results\\a5e97eb8db434ac89a80a9deef35002f\\point-01",
+    "config": {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 3,
+      "rounds": 3,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 30000,
+      "seed": 20365832,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    "git": {
+      "commit": "28f517e56d3ce4655afc8b3ebe2af6b5e6b61926",
+      "status_porcelain": "M rtl/tb/verify_predecoder.py\n M scripts/collect_rtl_evidence.py\n M scripts/prepare_rtl.py\n M scripts/verify_rtl.py\n M tests/test_research_methods.py\n?? scripts/retime_study.py\n?? scripts/score_rtl_replay.py\n?? scripts/study_queues.py\n?? src/qec_project/queueing.py"
+    },
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.5.4",
+      "stim": "1.16.0",
+      "pymatching": "2.4.0"
+    },
+    "dem_sha256": "d10b06fef24751b7838d2c72cefd7460ea9b3b58d835f38c61f6384e00dd9ee3",
+    "cells": 602,
+    "cell_types": {
+      "$_ANDNOT_": 49,
+      "$_NOT_": 6,
+      "$_AND_": 54,
+      "$_OR_": 351,
+      "$_NOR_": 2,
+      "$_NAND_": 2,
+      "$_XNOR_": 22,
+      "$_XOR_": 86,
+      "$_ORNOT_": 5,
+      "$_SDFFE_PP0N_": 1,
+      "$_SDFFE_PP0P_": 24
+    },
+    "register_bits": 25,
+    "cycles": {
+      "vectors_accepted": 31302,
+      "outputs_consumed": 31300,
+      "cycles": 48594,
+      "resets": 3,
+      "note": "Resets discard pending output; 10 ns test clock is not achieved timing",
+      "unstalled_latency_cycles": 1,
+      "unstalled_initiation_interval_cycles": 1
+    }
+  },
+  {
+    "basis": "X",
+    "distance": 5,
+    "rounds": 5,
+    "detectors": 120,
+    "observables": 1,
+    "edges": 430,
+    "vectors": 38262,
+    "sample_start": 7262,
+    "sample_count": 30000,
+    "replay": "results\\a5e97eb8db434ac89a80a9deef35002f\\point-07",
+    "config": {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 5,
+      "rounds": 5,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 30000,
+      "seed": 20994206,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    "git": {
+      "commit": "28f517e56d3ce4655afc8b3ebe2af6b5e6b61926",
+      "status_porcelain": "M rtl/tb/verify_predecoder.py\n M scripts/collect_rtl_evidence.py\n M scripts/prepare_rtl.py\n M scripts/verify_rtl.py\n M tests/test_research_methods.py\n?? scripts/retime_study.py\n?? scripts/score_rtl_replay.py\n?? scripts/study_queues.py\n?? src/qec_project/queueing.py"
+    },
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.5.4",
+      "stim": "1.16.0",
+      "pymatching": "2.4.0"
+    },
+    "dem_sha256": "fbb0afccc3cee36c6aa70633ce1aeb9f938baa30ef5b704feb825875611d5f35",
+    "cells": 7055,
+    "cell_types": {
+      "$_ANDNOT_": 413,
+      "$_NOT_": 33,
+      "$_AND_": 430,
+      "$_OR_": 5177,
+      "$_NOR_": 2,
+      "$_NAND_": 2,
+      "$_XOR_": 726,
+      "$_XNOR_": 134,
+      "$_ORNOT_": 17,
+      "$_SDFFE_PP0N_": 1,
+      "$_SDFFE_PP0P_": 120
+    },
+    "register_bits": 121,
+    "cycles": {
+      "vectors_accepted": 38262,
+      "outputs_consumed": 38260,
+      "cycles": 59576,
+      "resets": 3,
+      "note": "Resets discard pending output; 10 ns test clock is not achieved timing",
+      "unstalled_latency_cycles": 1,
+      "unstalled_initiation_interval_cycles": 1
+    }
+  },
+  {
+    "basis": "X",
+    "distance": 7,
+    "rounds": 7,
+    "detectors": 336,
+    "observables": 1,
+    "edges": 1414,
+    "vectors": 87618,
+    "sample_start": 56618,
+    "sample_count": 30000,
+    "replay": "results\\a5e97eb8db434ac89a80a9deef35002f\\point-13",
+    "config": {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 7,
+      "rounds": 7,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 30000,
+      "seed": 21622580,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    "git": {
+      "commit": "28f517e56d3ce4655afc8b3ebe2af6b5e6b61926",
+      "status_porcelain": "M rtl/tb/verify_predecoder.py\n M scripts/collect_rtl_evidence.py\n M scripts/prepare_rtl.py\n M scripts/verify_rtl.py\n M tests/test_research_methods.py\n?? scripts/retime_study.py\n?? scripts/score_rtl_replay.py\n?? scripts/study_queues.py\n?? src/qec_project/queueing.py"
+    },
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.5.4",
+      "stim": "1.16.0",
+      "pymatching": "2.4.0"
+    },
+    "dem_sha256": "d4ebf37be8130ab4378224fcbe8753654544343a0c4e653cc89416aeb5cca738",
+    "cells": 25869,
+    "cell_types": {
+      "$_ANDNOT_": 1312,
+      "$_NOT_": 77,
+      "$_AND_": 1414,
+      "$_OR_": 19795,
+      "$_NOR_": 2,
+      "$_NAND_": 2,
+      "$_XOR_": 2510,
+      "$_XNOR_": 318,
+      "$_ORNOT_": 102,
+      "$_SDFFE_PP0N_": 1,
+      "$_SDFFE_PP0P_": 336
+    },
+    "register_bits": 337,
+    "cycles": {
+      "vectors_accepted": 87618,
+      "outputs_consumed": 87616,
+      "cycles": 136411,
+      "resets": 3,
+      "note": "Resets discard pending output; 10 ns test clock is not achieved timing",
+      "unstalled_latency_cycles": 1,
+      "unstalled_initiation_interval_cycles": 1
+    }
+  },
+  {
+    "basis": "Z",
+    "distance": 3,
+    "rounds": 3,
+    "detectors": 24,
+    "observables": 1,
+    "edges": 54,
+    "vectors": 31302,
+    "sample_start": 302,
+    "sample_count": 30000,
+    "replay": "results\\a5e97eb8db434ac89a80a9deef35002f\\point-19",
+    "config": {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 3,
+      "rounds": 3,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 30000,
+      "seed": 22250954,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    "git": {
+      "commit": "28f517e56d3ce4655afc8b3ebe2af6b5e6b61926",
+      "status_porcelain": "M rtl/tb/verify_predecoder.py\n M scripts/collect_rtl_evidence.py\n M scripts/prepare_rtl.py\n M scripts/verify_rtl.py\n M tests/test_research_methods.py\n?? scripts/retime_study.py\n?? scripts/score_rtl_replay.py\n?? scripts/study_queues.py\n?? src/qec_project/queueing.py"
+    },
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.5.4",
+      "stim": "1.16.0",
+      "pymatching": "2.4.0"
+    },
+    "dem_sha256": "04451e5e6c93c03e6f8fe12cb904f7a42bc941bfc82e9c09bb929564e39e63c1",
+    "cells": 597,
+    "cell_types": {
+      "$_ANDNOT_": 48,
+      "$_NOT_": 2,
+      "$_AND_": 54,
+      "$_OR_": 350,
+      "$_NOR_": 2,
+      "$_NAND_": 2,
+      "$_XNOR_": 30,
+      "$_XOR_": 78,
+      "$_ORNOT_": 6,
+      "$_SDFFE_PP0N_": 1,
+      "$_SDFFE_PP0P_": 24
+    },
+    "register_bits": 25,
+    "cycles": {
+      "vectors_accepted": 31302,
+      "outputs_consumed": 31300,
+      "cycles": 48594,
+      "resets": 3,
+      "note": "Resets discard pending output; 10 ns test clock is not achieved timing",
+      "unstalled_latency_cycles": 1,
+      "unstalled_initiation_interval_cycles": 1
+    }
+  }
+]

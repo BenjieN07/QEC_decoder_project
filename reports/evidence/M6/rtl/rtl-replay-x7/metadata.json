@@ -1,0 +1,39 @@
+{
+  "basis": "X",
+  "distance": 7,
+  "rounds": 7,
+  "detectors": 336,
+  "observables": 1,
+  "edges": 1414,
+  "vectors": 87618,
+  "sample_start": 56618,
+  "sample_count": 30000,
+  "replay": "results\\a5e97eb8db434ac89a80a9deef35002f\\point-13",
+  "config": {
+    "code_type": "rotated_surface_code",
+    "basis": "X",
+    "distance": 7,
+    "rounds": 7,
+    "noise": {
+      "after_clifford_depolarization": 0.005,
+      "before_round_data_depolarization": 0.005,
+      "before_measure_flip_probability": 0.005,
+      "after_reset_flip_probability": 0.005
+    },
+    "shots": 30000,
+    "seed": 21622580,
+    "output_dir": "results",
+    "decoder": "pymatching"
+  },
+  "git": {
+    "commit": "28f517e56d3ce4655afc8b3ebe2af6b5e6b61926",
+    "status_porcelain": "M rtl/tb/verify_predecoder.py\n M scripts/collect_rtl_evidence.py\n M scripts/prepare_rtl.py\n M scripts/verify_rtl.py\n M tests/test_research_methods.py\n?? scripts/retime_study.py\n?? scripts/score_rtl_replay.py\n?? scripts/study_queues.py\n?? src/qec_project/queueing.py"
+  },
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.5.4",
+    "stim": "1.16.0",
+    "pymatching": "2.4.0"
+  },
+  "dem_sha256": "d4ebf37be8130ab4378224fcbe8753654544343a0c4e653cc89416aeb5cca738"
+}

@@ -19,7 +19,7 @@ def main():
     args=parser.parse_args();output=args.study
     manifest=json.loads((output/'manifest.json').read_text());spec=manifest['study']
     rows=json.loads((output/'study.json').read_text())
-    manifest['retiming']={'git':git_info(),'started_utc':datetime.now(timezone.utc).isoformat(),
+    manifest['retiming']={'git':git_info(),'status':'running','started_utc':datetime.now(timezone.utc).isoformat(),
                          'scope':'Sequential replay after study sampling and RTL builds; shared laptop remains unisolated'}
     (output/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
     for point in sorted(output.glob('point-*')):
@@ -68,6 +68,8 @@ def main():
     from qec_project.research_plots import plots
     write_csv(rows,output)
     plots(output)
+    manifest['retiming'].update(status='complete',finished_utc=datetime.now(timezone.utc).isoformat())
+    (output/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
 
 
 if __name__=='__main__':main()

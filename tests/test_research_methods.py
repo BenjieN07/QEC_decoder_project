@@ -53,6 +53,7 @@ def test_research_config_rejects_bad_probabilities(tmp_path):
 
 
 def test_queue_capacity_audit_does_not_hide_drops():
+    import json
     from qec_project.queueing import replay
     stable=replay(np.ones((10,2)),10,1,20,2)
     assert stable['deadline_misses']==stable['capacity_violation_events']==0
@@ -60,3 +61,4 @@ def test_queue_capacity_audit_does_not_hide_drops():
     assert overloaded['deadline_misses']==9
     assert overloaded['capacity_violation_events']>0
     assert overloaded['drops']==0
+    json.dumps(overloaded)
