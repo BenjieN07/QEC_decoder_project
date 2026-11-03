@@ -1,0 +1,37 @@
+{
+  "shots": 1000,
+  "admissible_edges": 54,
+  "baseline_failures": 493,
+  "hybrid_failures": 470,
+  "baseline_ci": [
+    0.46209940740448396,
+    0.5239541672143138
+  ],
+  "hybrid_ci": [
+    0.43923991460215,
+    0.5009896909069833
+  ],
+  "paired_failure_rate_delta": -0.023,
+  "paired_delta_normal_95": [
+    -0.04144479341180063,
+    -0.00455520658819937
+  ],
+  "paired_interval_warning": "Normal approximation; unreliable for few disagreements",
+  "disagreement_probability_ci": [
+    0.07288824391300744,
+    0.10825735156211885
+  ],
+  "baseline_only_failures": 56,
+  "hybrid_only_failures": 33,
+  "original_events": 10998,
+  "residual_events": 9992,
+  "event_reduction": 0.09147117657755954,
+  "dense_bytes_total": 20000,
+  "sparse_baseline_bytes_total": 60992,
+  "sparse_hybrid_bytes_total": 56968,
+  "baseline_decode_ns": 5495400,
+  "predecode_ns": 14345900,
+  "residual_decode_ns": 4253300,
+  "total_hybrid_ns": 18599200,
+  "scope": "offline batch; setup/sampling/serialization excluded; preliminary one trial"
+}

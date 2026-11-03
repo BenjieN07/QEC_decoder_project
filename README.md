@@ -3,8 +3,9 @@
 Research question: can a hardware-friendly local predecoder reduce downstream
 MWPM work and communication while retaining acceptable logical accuracy?
 
-**Current scope: M1 baseline implemented.** Offline Stim/PyMatching memory experiments
-are available; predecoding and RTL are not yet implemented. The packet defines M0–M6.
+**Current scope: M1 baseline and preliminary M2–M4 checkpoints implemented.**
+See [project status](reports/PROJECT_STATUS.md) for commands, measured results and
+remaining acceptance work. M5 hardware tooling and M6 final study remain incomplete.
 
 ## See actual simulation results
 
@@ -78,10 +79,7 @@ the lock records one tested resolution, not all possible environments.
 `tests/` checks infrastructure, and `reports/milestones/` records acceptance evidence.
 MIT licensing permits reuse while retaining attribution.
 
-M1 will generate rotated surface-code X/Z memory circuits, sample detector events
-and actual observables, and compare PyMatching predictions with those observables.
-Planned experiments begin at d=3, rounds=3, seed=42, including noiseless controls
-and a small noisy run, followed by a Sinter cross-check and uncertainty intervals.
-The proposed `demo` and `sweep` commands are intentionally deferred until tested.
-The existing smoke command above remains the only experiment-facing command.
-M1 requires the user's go-ahead.
+The baseline now generates rotated X/Z memory circuits, samples detector events
+and actual observables, and scores PyMatching predictions. See the milestone
+reports for commands, acceptance evidence and limitations. The user has authorized
+sequential work through the roadmap; hardware verification needs its tool environment.
