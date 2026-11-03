@@ -1,0 +1,34 @@
+{
+  "setup_ns": 16643400,
+  "batch_trials": 10,
+  "shots": 1000,
+  "batch_ns": [
+    698400,
+    621500,
+    771400,
+    848500,
+    1089200,
+    1644500,
+    1342600,
+    740400,
+    676300,
+    657300
+  ],
+  "batch_shots_per_second": 1322926.3130043657,
+  "single_decode_ns": {
+    "p50": 10300.0,
+    "p95": 22504.999999999996,
+    "p99": 48104.0
+  },
+  "detector_count": 24,
+  "mean_events": 1.383,
+  "event_count_percentiles": [
+    1.0,
+    4.0499999999999545,
+    6.0
+  ],
+  "dense_bytes_per_window": 20,
+  "mean_sparse_bytes": 22.532,
+  "numpy_payload_bytes": 25000,
+  "timing_scope": "CPU decode only; sampling, setup, I/O excluded; not feedback latency"
+}

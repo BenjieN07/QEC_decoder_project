@@ -48,6 +48,13 @@ def write_manifest(config):
 def main(argv=None):
     import sys
     argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] == 'benchmark':
+        parser = argparse.ArgumentParser(description='M2 fixed-sample CPU workload replay')
+        parser.add_argument('mode')
+        parser.add_argument('--replay', type=Path, required=True, help='M1 per-point directory')
+        args = parser.parse_args(argv)
+        from .workload import benchmark
+        return benchmark(args.replay)
     if argv and argv[0] in ('demo', 'sweep'):
         return experiment_cli(argv)
     parser = argparse.ArgumentParser(description="M0 reproducibility infrastructure; no QEC simulation yet")
