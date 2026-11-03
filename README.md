@@ -3,8 +3,25 @@
 Research question: can a hardware-friendly local predecoder reduce downstream
 MWPM work and communication while retaining acceptable logical accuracy?
 
-**Current scope: M0 infrastructure only.** No circuits, decoder experiments,
-performance results, or RTL have been implemented. The project packet defines M0–M6.
+**Current scope: M1 baseline implemented.** Offline Stim/PyMatching memory experiments
+are available; predecoding and RTL are not yet implemented. The packet defines M0–M6.
+
+## See actual simulation results
+
+```powershell
+.\.venv\Scripts\python.exe -m qec_project demo --distance 3 --rounds 3 --p 0.005 --shots 1000 --seed 42
+.\.venv\Scripts\python.exe -m qec_project sweep --config configs/smoke.json
+```
+
+The program prints a results folder containing stats.csv, a plot, a manifest and
+per-point circuit/DEM/config/sample files. The sweep currently fixes X/Z,
+d=3/5/7, rounds=d and p=.001/.003/.005; shots/seed/output come from the config.
+The demo's --p applies to each of the four noise channels. Logical failure rate
+means the fraction of whole memory experiments whose observable was predicted
+incorrectly. Error bars show 95% Wilson intervals; zero failures is still uncertain.
+`--crosscheck` compares the same samples through Sinter's PyMatching adapter.
+See reports/milestones/M1.md for evidence and limitations. These plots are not
+threshold claims or hardware performance results.
 
 ## Install and run
 

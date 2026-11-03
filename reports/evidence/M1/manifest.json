@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "mode": "baseline",
+  "simulation_performed": true,
+  "created_utc": "2026-11-03T19:15:34.334308+00:00",
+  "config": {
+    "code_type": "rotated_surface_code",
+    "basis": "X",
+    "distance": 3,
+    "rounds": 3,
+    "noise": {
+      "after_clifford_depolarization": 0.001,
+      "before_round_data_depolarization": 0.001,
+      "before_measure_flip_probability": 0.001,
+      "after_reset_flip_probability": 0.001
+    },
+    "shots": 1000,
+    "seed": 42,
+    "output_dir": "results",
+    "decoder": "pymatching"
+  },
+  "seed": 42,
+  "os": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "python": "3.12.14",
+  "versions": {
+    "qec-project": "0.1.0",
+    "stim": "1.16.0",
+    "pymatching": "2.4.0",
+    "sinter": "1.16.0",
+    "numpy": "2.5.4",
+    "pytest": "9.2.0"
+  },
+  "git": {
+    "commit": "490e30bcaaa6386d363ab82cbf1550b40304480e",
+    "status_porcelain": "M src/qec_project/__main__.py\n?? src/qec_project/baseline.py\n?? tests/test_baseline.py"
+  },
+  "configs": [
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 3,
+      "rounds": 3,
+      "noise": {
+        "after_clifford_depolarization": 0.001,
+        "before_round_data_depolarization": 0.001,
+        "before_measure_flip_probability": 0.001,
+        "after_reset_flip_probability": 0.001
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 3,
+      "rounds": 3,
+      "noise": {
+        "after_clifford_depolarization": 0.003,
+        "before_round_data_depolarization": 0.003,
+        "before_measure_flip_probability": 0.003,
+        "after_reset_flip_probability": 0.003
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 3,
+      "rounds": 3,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 5,
+      "rounds": 5,
+      "noise": {
+        "after_clifford_depolarization": 0.001,
+        "before_round_data_depolarization": 0.001,
+        "before_measure_flip_probability": 0.001,
+        "after_reset_flip_probability": 0.001
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 5,
+      "rounds": 5,
+      "noise": {
+        "after_clifford_depolarization": 0.003,
+        "before_round_data_depolarization": 0.003,
+        "before_measure_flip_probability": 0.003,
+        "after_reset_flip_probability": 0.003
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 5,
+      "rounds": 5,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 7,
+      "rounds": 7,
+      "noise": {
+        "after_clifford_depolarization": 0.001,
+        "before_round_data_depolarization": 0.001,
+        "before_measure_flip_probability": 0.001,
+        "after_reset_flip_probability": 0.001
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 7,
+      "rounds": 7,
+      "noise": {
+        "after_clifford_depolarization": 0.003,
+        "before_round_data_depolarization": 0.003,
+        "before_measure_flip_probability": 0.003,
+        "after_reset_flip_probability": 0.003
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "X",
+      "distance": 7,
+      "rounds": 7,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 3,
+      "rounds": 3,
+      "noise": {
+        "after_clifford_depolarization": 0.001,
+        "before_round_data_depolarization": 0.001,
+        "before_measure_flip_probability": 0.001,
+        "after_reset_flip_probability": 0.001
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 3,
+      "rounds": 3,
+      "noise": {
+        "after_clifford_depolarization": 0.003,
+        "before_round_data_depolarization": 0.003,
+        "before_measure_flip_probability": 0.003,
+        "after_reset_flip_probability": 0.003
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 3,
+      "rounds": 3,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 5,
+      "rounds": 5,
+      "noise": {
+        "after_clifford_depolarization": 0.001,
+        "before_round_data_depolarization": 0.001,
+        "before_measure_flip_probability": 0.001,
+        "after_reset_flip_probability": 0.001
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 5,
+      "rounds": 5,
+      "noise": {
+        "after_clifford_depolarization": 0.003,
+        "before_round_data_depolarization": 0.003,
+        "before_measure_flip_probability": 0.003,
+        "after_reset_flip_probability": 0.003
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 5,
+      "rounds": 5,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 7,
+      "rounds": 7,
+      "noise": {
+        "after_clifford_depolarization": 0.001,
+        "before_round_data_depolarization": 0.001,
+        "before_measure_flip_probability": 0.001,
+        "after_reset_flip_probability": 0.001
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 7,
+      "rounds": 7,
+      "noise": {
+        "after_clifford_depolarization": 0.003,
+        "before_round_data_depolarization": 0.003,
+        "before_measure_flip_probability": 0.003,
+        "after_reset_flip_probability": 0.003
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    },
+    {
+      "code_type": "rotated_surface_code",
+      "basis": "Z",
+      "distance": 7,
+      "rounds": 7,
+      "noise": {
+        "after_clifford_depolarization": 0.005,
+        "before_round_data_depolarization": 0.005,
+        "before_measure_flip_probability": 0.005,
+        "after_reset_flip_probability": 0.005
+      },
+      "shots": 1000,
+      "seed": 42,
+      "output_dir": "results",
+      "decoder": "pymatching"
+    }
+  ]
+}
