@@ -50,3 +50,13 @@ def test_research_config_rejects_bad_probabilities(tmp_path):
     spec['probabilities']=[float('nan')]
     path=tmp_path/'bad.json';path.write_text(json.dumps(spec))
     with pytest.raises(ValueError):load_study(path)
+
+
+def test_queue_capacity_audit_does_not_hide_drops():
+    from qec_project.queueing import replay
+    stable=replay(np.ones((10,2)),10,1,20,2)
+    assert stable['deadline_misses']==stable['capacity_violation_events']==0
+    overloaded=replay(np.full((10,1),20),10,1,30,2)
+    assert overloaded['deadline_misses']==9
+    assert overloaded['capacity_violation_events']>0
+    assert overloaded['drops']==0

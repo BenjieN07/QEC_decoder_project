@@ -17,6 +17,7 @@ async def verify(dut):
     cycles = 0
     resets = 0
     held_valid = False
+    observed = []
     while index < len(vectors) or pending is not None:
         dut.clk.value = 0
         reset = cycles == 0 or cycles in (35,220)
@@ -39,9 +40,11 @@ async def verify(dut):
         else:
             if pending is not None and ready:
                 consumed += 1
+                observed.append([pending_index,int(dut.residual.value),int(dut.frame.value)])
                 pending = None
             if valid and in_ready:
                 pending = vectors[index]
+                pending_index=index
                 index += 1
         dut.clk.value = 1
         await Timer(5,unit='ns')
@@ -51,3 +54,4 @@ async def verify(dut):
         vectors_accepted=index,outputs_consumed=consumed,cycles=cycles,resets=resets,
         note='Resets discard pending output; 10 ns test clock is not achieved timing',
         unstalled_latency_cycles=1,unstalled_initiation_interval_cycles=1),indent=2))
+    Path(os.environ['OUTPUT_FILE']).write_text(json.dumps(observed))

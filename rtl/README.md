@@ -39,16 +39,18 @@ From Windows project root:
 
 Inside Ubuntu, from `/mnt/c/oned/QEC_decoder_project-1`:
 ```bash
-python3 -m venv /tmp/qec-rtl-env
-/tmp/qec-rtl-env/bin/python -m pip install -r requirements-rtl-lock.txt
-/tmp/qec-rtl-env/bin/python scripts/verify_rtl.py results/rtl-x3 --build-dir /tmp/qec-rtl-x3-build
+python3 -m venv ~/.venvs/qec-rtl
+~/.venvs/qec-rtl/bin/python -m pip install -r requirements-rtl-lock.txt
+~/.venvs/qec-rtl/bin/python scripts/verify_rtl.py results/rtl-x3 --build-dir /tmp/qec-rtl-x3-build
 ```
 
 The runner compiles with Verilator, runs the cocotb scoreboard, and then invokes
 Yosys generic synthesis. Check verification.xml, cycles.json and synthesis.log.
 Generic cells are not FPGA LUTs, target area, power or achievable clock frequency.
-The temporary environment/build directory may be removed at restart; recreate it
-using the same commands. Keep permanent project results in the repository folder.
+The environment is now stored persistently inside Ubuntu. Temporary build directories
+may be removed at restart; the runner recreates them. Keep permanent results in the
+repository folder. Windows and Linux environments are separate; do not activate the
+Windows .venv inside Ubuntu.
 The generated wide combinational design may have unfavorable timing as distance grows.
 
 Official references: [cocotb runner](https://docs.cocotb.org/en/stable/runner.html),

@@ -59,6 +59,24 @@ def describe_ns(values):
     return dict(zip(('p50','p95','p99'),np.percentile(values,[50,95,99]).tolist()))
 
 
+def write_csv(rows,output):
+    manifest=json.loads((output/'manifest.json').read_text())
+    flattened=[]
+    for row in rows:
+        flat={key:value for key,value in row.items() if not isinstance(value,(dict,list,tuple))}
+        for name in ('baseline_ci','hybrid_ci','paired_delta_ci'):
+            flat[name+'_low'],flat[name+'_high']=row[name]
+        for scope in ('batch_per_window_ns','single_window_ns'):
+            for component,percentiles in row[scope].items():
+                for quantile,value in percentiles.items():flat[f'{scope}_{component}_{quantile}']=value
+        flat.update(python_version=manifest['python'],os=manifest['os'],cpu=manifest['cpu_identifier'],
+                    source_commit=manifest['git']['commit'])
+        for name,version in manifest['versions'].items():flat['version_'+name]=version
+        flattened.append(flat)
+    with (output/'study.csv').open('w',newline='',encoding='utf-8') as file:
+        writer=csv.DictWriter(file,fieldnames=flattened[0].keys());writer.writeheader();writer.writerows(flattened)
+
+
 def study_point(config,spec,directory):
     directory.mkdir(parents=True)
     begin, cpu_begin = perf_counter_ns(),process_time_ns()
@@ -181,9 +199,7 @@ def run_study(config_path):
         (output/'study.json').write_text(json.dumps(rows,indent=2),encoding='utf-8')
         print(f'{index+1}/{len(grid)} {basis} d={distance} rounds={config["rounds"]} p={p} A/B failures: '+
               ', '.join(f'{r["mode"]} {r["baseline_failures"]}/{r["hybrid_failures"]}' for r in rows[-len(spec['event_limits']):]),flush=True)
-    with (output/'study.csv').open('w',newline='',encoding='utf-8') as file:
-        keys = [key for key,value in rows[0].items() if not isinstance(value,(dict,list,tuple))]
-        writer = csv.DictWriter(file,fieldnames=keys,extrasaction='ignore');writer.writeheader();writer.writerows(rows)
+    write_csv(rows,output)
     from .research_plots import plots
     hardware = Path('reports/evidence/M5/summary.json')
     if hardware.exists():

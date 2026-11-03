@@ -13,16 +13,24 @@ from qec_project.predecoder import edges_from_dem, predecode
 from qec_project.__main__ import git_info
 import importlib.metadata
 import platform
+import stim
 
 
 def pack(bits):
     return sum(int(value)<<index for index,value in enumerate(bits))
 
 
-def prepare(basis, distance, output):
-    config = load_config('configs/smoke.json')
-    config.update(basis=basis,distance=distance,rounds=distance)
-    circuit = generate(config)
+def prepare(basis, distance, output, replay=None):
+    if replay is None:
+        config = load_config('configs/smoke.json')
+        config.update(basis=basis,distance=distance,rounds=distance)
+        circuit = generate(config)
+        sampled = circuit.compile_detector_sampler(seed=42).sample(1000)
+    else:
+        config = json.loads((replay/'config.json').read_text())
+        basis,distance=config['basis'],config['distance']
+        circuit=stim.Circuit.from_file(replay/'circuit.stim')
+        sampled=np.load(replay/'samples.npz')['detectors']
     dem = circuit.detector_error_model(decompose_errors=True)
     edges = edges_from_dem(dem)
     n, observables = circuit.num_detectors,circuit.num_observables
@@ -66,13 +74,13 @@ endmodule
     output.mkdir(parents=True,exist_ok=True)
     (output/'local_predecoder.sv').write_text('\n'.join(lines),encoding='utf-8')
     (output/'model.dem').write_text(str(dem),encoding='utf-8')
-    sampled = circuit.compile_detector_sampler(seed=42).sample(1000)
     rng = np.random.default_rng(912)
     vectors = [np.zeros(n,dtype=bool),np.ones(n,dtype=bool)]
     for a in range(n):
         s = np.zeros(n,dtype=bool); s[a] = True; vectors.append(s)
         for b in range(a+1,n):
             s = np.zeros(n,dtype=bool); s[[a,b]]=True; vectors.append(s)
+    sample_start=len(vectors)
     vectors.extend(sampled)
     vectors.extend(rng.integers(0,2,size=(1000,n),dtype=np.uint8).astype(bool))
     rows = []
@@ -81,7 +89,8 @@ endmodule
         rows.append([pack(syndrome),pack(residual),pack(frame)])
     (output/'vectors.json').write_text(json.dumps(rows),encoding='utf-8')
     (output/'metadata.json').write_text(json.dumps(dict(basis=basis,distance=distance,
-        rounds=distance,detectors=n,observables=observables,edges=len(edges),vectors=len(rows),
+        rounds=config['rounds'],detectors=n,observables=observables,edges=len(edges),vectors=len(rows),
+        sample_start=sample_start,sample_count=len(sampled),replay=str(replay) if replay else None,
         config=config,git=git_info(),python=platform.python_version(),
         versions={name:importlib.metadata.version(name) for name in ('numpy','stim','pymatching')},
         dem_sha256=hashlib.sha256(str(dem).encode()).hexdigest()),indent=2),encoding='utf-8')
@@ -93,5 +102,6 @@ if __name__ == '__main__':
     parser.add_argument('--basis',choices=['X','Z'],default='X')
     parser.add_argument('--distance',type=int,default=3)
     parser.add_argument('--output',type=Path,default=Path('results/rtl-x3'))
+    parser.add_argument('--replay',type=Path,help='Use the exact circuit and saved shots from a study point')
     args = parser.parse_args()
-    prepare(args.basis,args.distance,args.output)
+    prepare(args.basis,args.distance,args.output,args.replay)

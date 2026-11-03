@@ -14,6 +14,7 @@ directory = args.directory.resolve()
 root = Path(__file__).resolve().parents[1]
 os.environ['VECTOR_FILE'] = str(directory/'vectors.json')
 os.environ['CYCLE_FILE'] = str(directory/'cycles.json')
+os.environ['OUTPUT_FILE'] = str(directory/'observed_outputs.json')
 runner = get_runner('verilator')
 runner.build(sources=[directory/'local_predecoder.sv'],hdl_toplevel='local_predecoder',
              build_dir=args.build_dir or directory/'sim_build',always=True,build_args=['-Wno-fatal'])
