@@ -48,6 +48,16 @@ def write_manifest(config):
 def main(argv=None):
     import sys
     argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] == 'study':
+        parser = argparse.ArgumentParser(description='M6 paired research study')
+        parser.add_argument('mode')
+        parser.add_argument('--config',type=Path,default=Path('configs/research.json'))
+        args = parser.parse_args(argv)
+        try:
+            from .research import run_study
+            return run_study(args.config)
+        except (ValueError,OSError,ImportError) as error:
+            parser.error(str(error))
     if argv and argv[0] == 'model':
         parser = argparse.ArgumentParser(description='M4 hypothetical window queue model')
         parser.add_argument('mode')
@@ -71,12 +81,12 @@ def main(argv=None):
         return benchmark(args.replay)
     if argv and argv[0] in ('demo', 'sweep'):
         return experiment_cli(argv)
-    parser = argparse.ArgumentParser(description="M0 reproducibility infrastructure; no QEC simulation yet")
+    parser = argparse.ArgumentParser(description="QEC research: demo, sweep, study, benchmark, compare, model; or infrastructure --smoke")
     parser.add_argument("--config", type=Path, default=Path("configs/smoke.json"))
     parser.add_argument("--smoke", action="store_true", help="validate settings and write an environment manifest")
     args = parser.parse_args(argv)
     if not args.smoke:
-        parser.error("specify --smoke; experiment commands arrive in M1")
+        parser.error("specify --smoke or a command: demo, sweep, study, benchmark, compare, model")
     try:
         path = write_manifest(load_config(args.config))
     except (OSError, ValueError) as error:

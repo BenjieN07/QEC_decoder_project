@@ -1,0 +1,9 @@
+{
+  "base_config": "configs/smoke.json",
+  "distances": [3], "bases": ["X", "Z"], "probabilities": [0.005],
+  "round_multipliers": [1], "shots": 1000, "seed": 20261103,
+  "timing_shots": 512, "timing_trials": 3, "single_shots": 200,
+  "event_limits": [null, 2], "arrival_periods_ns": [1000, 10000],
+  "bandwidths_bits_per_second": [1000000000], "deadline_ns": 1000000,
+  "queue_capacity_windows": 64, "rtl_clock_period_ns_assumed": 10
+}

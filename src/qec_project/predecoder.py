@@ -46,6 +46,40 @@ def predecode(syndrome, edges, observables):
     return residual, frame, decisions
 
 
+def predecode_batch(syndromes, edges, observables, event_limit=None, chunk_size=4096):
+    """Vectorized execution of exactly the scalar rule; chunking bounds workspace.
+
+event_limit is an optional conservative whole-window fallback, not a new edge rule.
+"""
+    syndromes = np.asarray(syndromes,dtype=bool)
+    if syndromes.ndim != 2 or chunk_size < 1 or observables < 0:
+        raise ValueError('invalid batch shape, chunk size or observable count')
+    if event_limit is not None and event_limit < 0:
+        raise ValueError('event_limit must be nonnegative')
+    residual = syndromes.copy()
+    frames = np.zeros((len(syndromes),observables),dtype=bool)
+    for start in range(0,len(syndromes),chunk_size):
+        stop = min(start+chunk_size,len(syndromes))
+        original = syndromes[start:stop].T
+        degree = np.zeros(original.shape,dtype=np.int32)
+        active = np.empty((len(edges),stop-start),dtype=bool)
+        eligible = np.ones(stop-start,dtype=bool) if event_limit is None else original.sum(axis=0)<=event_limit
+        for index,(a,b,_) in enumerate(edges):
+            active[index] = original[a] & original[b] & eligible
+            degree[a] += active[index]; degree[b] += active[index]
+        output = original.copy()
+        frame = np.zeros((observables,stop-start),dtype=bool)
+        for index,(a,b,mask) in enumerate(edges):
+            chosen = active[index] & (degree[a]==1) & (degree[b]==1)
+            output[a] ^= chosen; output[b] ^= chosen
+            for bit in range(observables):
+                if mask & (1<<bit):
+                    frame[bit] ^= chosen
+        residual[start:stop] = output.T
+        frames[start:stop] = frame.T
+    return residual,frames
+
+
 def compare(directory):
     directory = Path(directory)
     data = np.load(directory/'samples.npz')
