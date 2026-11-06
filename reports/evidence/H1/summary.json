@@ -1,0 +1,155 @@
+{
+  "stage": "completed",
+  "backend": "ibm_marrakesh",
+  "experiment": {
+    "distance": 3,
+    "rounds": 3,
+    "bases": [
+      "X",
+      "Z"
+    ],
+    "shots_per_basis": 512,
+    "decoder_prior_probability": 0.005,
+    "transpiler_seed": 20261106,
+    "max_execution_time_seconds": 60,
+    "minimum_free_remaining_seconds": 120
+  },
+  "results": [
+    {
+      "basis": "X",
+      "shots": 512,
+      "detectors": 24,
+      "mean_events": 8.1640625,
+      "raw_observable_flip_count": 243,
+      "decoders": {
+        "baseline": {
+          "failures": 242,
+          "failure_probability": 0.47265625,
+          "ci": [
+            0.4297760363126683,
+            0.5159437201721769
+          ],
+          "A_only": 0,
+          "B_only": 0,
+          "paired_delta_ci": [
+            -0.008522124826342393,
+            0.008522124826342393
+          ]
+        },
+        "isolated": {
+          "failures": 242,
+          "failure_probability": 0.47265625,
+          "ci": [
+            0.4297760363126683,
+            0.5159437201721769
+          ],
+          "A_only": 0,
+          "B_only": 0,
+          "paired_delta_ci": [
+            -0.008522124826342393,
+            0.008522124826342393
+          ]
+        },
+        "max2": {
+          "failures": 242,
+          "failure_probability": 0.47265625,
+          "ci": [
+            0.4297760363126683,
+            0.5159437201721769
+          ],
+          "A_only": 0,
+          "B_only": 0,
+          "paired_delta_ci": [
+            -0.008522124826342393,
+            0.008522124826342393
+          ]
+        },
+        "guarded": {
+          "failures": 242,
+          "failure_probability": 0.47265625,
+          "ci": [
+            0.4297760363126683,
+            0.5159437201721769
+          ],
+          "A_only": 0,
+          "B_only": 0,
+          "paired_delta_ci": [
+            -0.008522124826342393,
+            0.008522124826342393
+          ]
+        }
+      }
+    },
+    {
+      "basis": "Z",
+      "shots": 512,
+      "detectors": 24,
+      "mean_events": 7.431640625,
+      "raw_observable_flip_count": 195,
+      "decoders": {
+        "baseline": {
+          "failures": 165,
+          "failure_probability": 0.322265625,
+          "ci": [
+            0.28323763481948466,
+            0.3639407823320088
+          ],
+          "A_only": 0,
+          "B_only": 0,
+          "paired_delta_ci": [
+            -0.008522124826342393,
+            0.008522124826342393
+          ]
+        },
+        "isolated": {
+          "failures": 165,
+          "failure_probability": 0.322265625,
+          "ci": [
+            0.28323763481948466,
+            0.3639407823320088
+          ],
+          "A_only": 0,
+          "B_only": 0,
+          "paired_delta_ci": [
+            -0.008522124826342393,
+            0.008522124826342393
+          ]
+        },
+        "max2": {
+          "failures": 165,
+          "failure_probability": 0.322265625,
+          "ci": [
+            0.28323763481948466,
+            0.3639407823320088
+          ],
+          "A_only": 0,
+          "B_only": 0,
+          "paired_delta_ci": [
+            -0.008522124826342393,
+            0.008522124826342393
+          ]
+        },
+        "guarded": {
+          "failures": 165,
+          "failure_probability": 0.322265625,
+          "ci": [
+            0.28323763481948466,
+            0.3639407823320088
+          ],
+          "A_only": 0,
+          "B_only": 0,
+          "paired_delta_ci": [
+            -0.008522124826342393,
+            0.008522124826342393
+          ]
+        }
+      }
+    }
+  ],
+  "reported_runtime_usage": {
+    "qpu_charge_time_seconds": 3
+  },
+  "measurements_from_real_QPU": true,
+  "decoder_prior": "Uncalibrated synthetic Stim prior; does not model all routing, device drift, leakage or readout correlations",
+  "scope": "Offline decoding of routed physical surface-code memory circuits, not real-time feedback or FPGA performance"
+}

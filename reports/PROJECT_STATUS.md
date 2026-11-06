@@ -5,6 +5,15 @@ The first M0–M6 study is implemented, tested and reported in
 digital prototype, not a deployed FPGA system or a publication claim. Earlier
 milestone reports preserve the history of smaller preliminary runs.
 
+[H1](milestones/H1.md) now adds **actual IBM quantum-processor measurements**:
+512 X and 512 Z d=3/three-round memory shots on ibm_marrakesh, using the free plan.
+Offline MWPM failed on 242/512 X and 165/512 Z shots; predecoders matched baseline
+predictions. The decoder prior is uncalibrated and routing overhead is substantial.
+No error-correction advantage, real-time feedback or physical FPGA execution was
+demonstrated. [Evidence](evidence/H1/summary.json) and
+[figure](evidence/H1/real_qpu_pilot.png) are available without another cloud job.
+Local keys/CRN are ignored and never part of the public evidence.
+
 The latest extension is [F1](milestones/F1.md): a preregistered guarded rule tested
 on 1.2 million fresh primary shots plus 220,000 control/stress shots. It has no
 observed baseline prediction disagreements and passes the provisional simultaneous

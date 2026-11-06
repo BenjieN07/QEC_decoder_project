@@ -8,6 +8,14 @@ accuracy degradation. There are no physical FPGA performance or power claims.
 Read the [final report](reports/final_report.md), [status](reports/PROJECT_STATUS.md)
 and [measurement methods](docs/research_methods.md).
 
+**Real quantum-hardware pilot completed:** [H1](reports/milestones/H1.md) ran 512
+X and 512 Z memory shots on IBM's ibm_marrakesh processor. Logical memory failure
+fractions were 47.27% and 32.23% with an uncalibrated prior. This validates the
+physical measurement pipeline, not an error-correction advantage or FPGA execution.
+See the [measured figure](reports/evidence/H1/real_qpu_pilot.png) and
+[private-access setup](docs/private_access.md). Credentials/job identifiers remain
+local, and a commit hook checks for credential contents before publication.
+
 The [F1 follow-up](reports/milestones/F1.md) tests a frozen guarded rule on fresh
 samples. It meets the provisional accuracy tolerance but misses its 5% traffic
 target and is not promoted to RTL. Its best adaptive saving is 4.00%, with no

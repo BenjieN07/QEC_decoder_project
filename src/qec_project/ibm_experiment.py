@@ -31,6 +31,15 @@ def model(basis,spec,noisy=False):
         before_measure_flip_probability=p,after_reset_flip_probability=p)
 
 
+def validate_spec(spec):
+    if (type(spec['shots_per_basis']) is not int or not 1<=spec['shots_per_basis']<=512 or
+        type(spec['max_execution_time_seconds']) is not int or not 1<=spec['max_execution_time_seconds']<=60 or
+        type(spec['minimum_free_remaining_seconds']) is not int or
+        spec['minimum_free_remaining_seconds']<spec['max_execution_time_seconds']+60 or
+        spec['distance']!=3 or spec['rounds']!=3 or spec['bases']!=['X','Z']):
+        raise ValueError('Pilot requires d=3, rounds=3, X/Z, 1..512 shots, <=60 seconds and a 60-second quota reserve')
+
+
 def assert_free(service,spec):
     token,instance=credentials()
     selected=next((row for row in service.instances() if row.get('crn')==instance),None)
@@ -47,8 +56,7 @@ def prepare():
     from qiskit.transpiler import generate_preset_pass_manager
     from qiskit_aer import AerSimulator
     spec=json.loads((ROOT/'configs/ibm_pilot.json').read_text())
-    if spec['shots_per_basis']>512 or spec['max_execution_time_seconds']>60 or spec['distance']!=3 or spec['rounds']!=3 or spec['bases']!=['X','Z']:
-        raise ValueError('Pilot caps are 512 shots/basis, d=3, rounds=3, X/Z and 60 seconds')
+    validate_spec(spec)
     capability=probe()
     available=[b for b in capability['backends'] if b['operational'] and not b['simulator']]
     if not available:raise ValueError('No operational quantum backend is accessible')
@@ -56,7 +64,8 @@ def prepare():
     summaries=[];compiled=[]
     with quiet_sdk():
         service=connect();remaining=assert_free(service,spec)
-        backend=service.backend(available[0]['name'])
+        backend=service.backend(available[0]['name'],instance=credentials()[1])
+        remaining=assert_free(service,spec)
         manager=generate_preset_pass_manager(backend=backend,optimization_level=1,seed_transpiler=spec['transpiler_seed'])
         for basis in spec['bases']:
             reference=model(basis,spec);qc,metadata=to_qiskit(reference)
@@ -89,17 +98,21 @@ def prepare():
 
 
 def submit(directory):
-    from qiskit import qpy
-    from qiskit_ibm_runtime import SamplerV2
     directory=directory.resolve()
     manifest=json.loads((directory/'manifest.json').read_text())
     if (directory/'job.json').exists():raise ValueError('A job already exists for this prepared pilot; refusing duplicate submission')
+    validate_spec(manifest['spec'])
     if hashlib.sha256((directory/'circuits.qpy').read_bytes()).hexdigest()!=manifest['qpy_sha256']:
         raise ValueError('Prepared circuits changed')
+    from qiskit import qpy
+    from qiskit_ibm_runtime import SamplerV2
     with (directory/'circuits.qpy').open('rb') as stream:circuits=qpy.load(stream)
+    if len(circuits)!=2 or any(circuit.num_clbits!=33 for circuit in circuits):
+        raise ValueError('Prepared pilot must contain exactly two 33-measurement circuits')
     with quiet_sdk():
         service=connect();remaining=assert_free(service,manifest['spec'])
-        backend=service.backend(manifest['backend'])
+        backend=service.backend(manifest['backend'],instance=credentials()[1])
+        remaining=assert_free(service,manifest['spec'])
         if not backend.status().operational or backend.configuration().simulator:
             raise ValueError('Selected real backend is unavailable')
         sampler=SamplerV2(mode=backend,options={
@@ -123,6 +136,12 @@ def fetch(directory):
         if status not in ('DONE','JobStatus.DONE'):
             return dict(stage='waiting' if status not in ('ERROR','CANCELLED','JobStatus.ERROR','JobStatus.CANCELLED') else 'failed',status=status,backend=manifest['backend'])
         result=job.result()
+        runtime_usage={}
+        try:
+            metrics=job.metrics()
+            runtime_usage={key:value for key,value in metrics.get('usage',{}).items()
+                           if key.endswith('_seconds') and isinstance(value,(int,float))}
+        except Exception:pass
     rows=[]
     for index,entry in enumerate(manifest['circuits']):
         basis=entry['basis'];reference=stim.Circuit.from_file(directory/(basis+'.stim'))
@@ -148,6 +167,7 @@ def fetch(directory):
                 paired_delta_ci=paired_interval(int((failures['baseline'] & ~wrong).sum()),int((wrong & ~failures['baseline']).sum()),n))
                 for label,wrong in failures.items()}))
     report=dict(stage='completed',backend=manifest['backend'],experiment=manifest['spec'],results=rows,
+        reported_runtime_usage=runtime_usage,
         measurements_from_real_QPU=True,decoder_prior='Uncalibrated synthetic Stim prior; does not model all routing, device drift, leakage or readout correlations',
         scope='Offline decoding of routed physical surface-code memory circuits, not real-time feedback or FPGA performance')
     write(directory/'summary.json',report);manifest['stage']='completed';write(directory/'manifest.json',manifest)
