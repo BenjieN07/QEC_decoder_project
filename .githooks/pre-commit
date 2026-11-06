@@ -1,0 +1,10 @@
+#!/bin/sh
+# Exact-value checking reads local credential files but never prints them.
+if [ -x .venv/Scripts/python.exe ]; then
+    exec .venv/Scripts/python.exe scripts/check_secrets.py --history
+elif [ -x .venv/bin/python ]; then
+    exec .venv/bin/python scripts/check_secrets.py --history
+else
+    echo 'Commit blocked: set up the project Python environment for credential checks.' >&2
+    exit 1
+fi

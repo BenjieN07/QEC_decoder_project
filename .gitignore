@@ -8,3 +8,13 @@ __pycache__/
 build/
 dist/
 results/
+# Local access credentials; never publish these files.
+/api.txt
+/crn.txt
+/.env
+/.env.*
+!/.env.example
+/credentials/
+/secrets/
+/private/
+/.qiskit/
