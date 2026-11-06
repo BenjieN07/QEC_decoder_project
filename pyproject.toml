@@ -11,7 +11,7 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10"]
-research = ["stim>=1.15,<2", "pymatching>=2.3,<3", "sinter>=1.15,<2", "numpy>=1.26,<3", "scipy>=1.11,<2", "matplotlib>=3.8,<4"]
+research = ["stim>=1.15,<2", "pymatching>=2.3,<3", "sinter>=1.15,<2", "numpy>=1.26,<3", "scipy>=1.11,<2", "matplotlib>=3.8,<4", "networkx>=3,<4"]
 
 [project.scripts]
 qec-project = "qec_project.__main__:main"

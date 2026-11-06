@@ -1,0 +1,17 @@
+{
+  "base_config": "configs/smoke.json",
+  "primary_distances": [3,5,7],
+  "primary_bases": ["X","Z"],
+  "primary_probabilities": [0.004,0.007],
+  "primary_shots": 100000,
+  "stress_shots": 50000,
+  "control_shots": 10000,
+  "seed": 202611060001,
+  "guard_hops": 2,
+  "boundary_odds_margin": 10,
+  "accuracy_margin": 0.0002,
+  "family_alpha": 0.05,
+  "minimum_adaptive_reduction": 0.05,
+  "timing_trials": 5,
+  "timing_shots": 4096
+}

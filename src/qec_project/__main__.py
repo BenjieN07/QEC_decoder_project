@@ -48,6 +48,15 @@ def write_manifest(config):
 def main(argv=None):
     import sys
     argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0]=='guarded':
+        parser=argparse.ArgumentParser(description='F1 preregistered guarded predecoder study')
+        parser.add_argument('mode');parser.add_argument('--config',type=Path,default=Path('configs/guarded.json'))
+        parser.add_argument('--smoke',action='store_true',help='Separate small pipeline validation, no promotion decision')
+        args=parser.parse_args(argv)
+        try:
+            from .guarded_study import run_plan
+            return run_plan(args.config,args.smoke)
+        except (ValueError,OSError,ImportError) as error:parser.error(str(error))
     if argv and argv[0] == 'study':
         parser = argparse.ArgumentParser(description='M6 paired research study')
         parser.add_argument('mode')
