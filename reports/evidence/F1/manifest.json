@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "mode": "F1_heldout",
+  "simulation_performed": true,
+  "created_utc": "2026-11-06T18:26:56.588270+00:00",
+  "config": {
+    "code_type": "rotated_surface_code",
+    "basis": "X",
+    "distance": 3,
+    "rounds": 3,
+    "noise": {
+      "after_clifford_depolarization": 0.005,
+      "before_round_data_depolarization": 0.005,
+      "before_measure_flip_probability": 0.005,
+      "after_reset_flip_probability": 0.005
+    },
+    "shots": 1000,
+    "seed": 42,
+    "output_dir": "results",
+    "decoder": "pymatching"
+  },
+  "seed": 42,
+  "os": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "python": "3.12.14",
+  "versions": {
+    "qec-project": "0.1.0",
+    "stim": "1.16.0",
+    "pymatching": "2.4.0",
+    "sinter": "1.16.0",
+    "numpy": "2.5.4",
+    "pytest": "9.2.0"
+  },
+  "git": {
+    "commit": "1e3167535cd6b00f10a81d7fcff1d8916f17c857",
+    "status_porcelain": ""
+  },
+  "status": "complete",
+  "plan": {
+    "base_config": "configs/smoke.json",
+    "primary_distances": [
+      3,
+      5,
+      7
+    ],
+    "primary_bases": [
+      "X",
+      "Z"
+    ],
+    "primary_probabilities": [
+      0.004,
+      0.007
+    ],
+    "primary_shots": 100000,
+    "stress_shots": 50000,
+    "control_shots": 10000,
+    "seed": 202611060001,
+    "guard_hops": 2,
+    "boundary_odds_margin": 10,
+    "accuracy_margin": 0.0002,
+    "family_alpha": 0.05,
+    "minimum_adaptive_reduction": 0.05,
+    "timing_trials": 5,
+    "timing_shots": 4096
+  },
+  "preregistration_sha256": "27889d402acbbcadeb31fb51921565935c0ffeeda0b0ca5ef33748fe866c748b",
+  "config_sha256": "15103043a8b04678685bbafa0718c6e04896dbe3cb65652f3e557d1306c3ae60",
+  "new_rule_has_no_RTL": true
+}

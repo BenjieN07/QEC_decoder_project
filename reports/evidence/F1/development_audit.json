@@ -1,0 +1,513 @@
+{
+  "cases": 72,
+  "old_pairs": 379,
+  "retained_old_pairs": 32,
+  "cases_no_guarded_decision": 50,
+  "records": [
+    {
+      "point": "point-06",
+      "shot": 2168,
+      "old_pairs": 1,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-06",
+      "shot": 4047,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-06",
+      "shot": 8826,
+      "old_pairs": 3,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-07",
+      "shot": 1855,
+      "old_pairs": 3,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-07",
+      "shot": 3500,
+      "old_pairs": 1,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-07",
+      "shot": 3843,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-08",
+      "shot": 754,
+      "old_pairs": 4,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-08",
+      "shot": 1422,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-08",
+      "shot": 1745,
+      "old_pairs": 1,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-09",
+      "shot": 852,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-09",
+      "shot": 1268,
+      "old_pairs": 4,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-09",
+      "shot": 1593,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-10",
+      "shot": 58,
+      "old_pairs": 4,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-10",
+      "shot": 66,
+      "old_pairs": 6,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-10",
+      "shot": 96,
+      "old_pairs": 4,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-11",
+      "shot": 62,
+      "old_pairs": 4,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-11",
+      "shot": 222,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-11",
+      "shot": 351,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-12",
+      "shot": 3444,
+      "old_pairs": 6,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-12",
+      "shot": 4624,
+      "old_pairs": 7,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-12",
+      "shot": 6294,
+      "old_pairs": 6,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-13",
+      "shot": 914,
+      "old_pairs": 2,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-13",
+      "shot": 1239,
+      "old_pairs": 8,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-13",
+      "shot": 3502,
+      "old_pairs": 7,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-14",
+      "shot": 264,
+      "old_pairs": 7,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-14",
+      "shot": 485,
+      "old_pairs": 7,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-14",
+      "shot": 640,
+      "old_pairs": 5,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-15",
+      "shot": 325,
+      "old_pairs": 12,
+      "retained_old_pairs": 3,
+      "guarded_pairs": 3
+    },
+    {
+      "point": "point-15",
+      "shot": 751,
+      "old_pairs": 8,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-15",
+      "shot": 2313,
+      "old_pairs": 11,
+      "retained_old_pairs": 2,
+      "guarded_pairs": 2
+    },
+    {
+      "point": "point-16",
+      "shot": 994,
+      "old_pairs": 10,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-16",
+      "shot": 1428,
+      "old_pairs": 10,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-16",
+      "shot": 2172,
+      "old_pairs": 10,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-17",
+      "shot": 28,
+      "old_pairs": 10,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-17",
+      "shot": 30,
+      "old_pairs": 7,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-17",
+      "shot": 230,
+      "old_pairs": 14,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-24",
+      "shot": 4233,
+      "old_pairs": 2,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-24",
+      "shot": 7791,
+      "old_pairs": 5,
+      "retained_old_pairs": 2,
+      "guarded_pairs": 2
+    },
+    {
+      "point": "point-24",
+      "shot": 15612,
+      "old_pairs": 2,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-25",
+      "shot": 351,
+      "old_pairs": 4,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-25",
+      "shot": 1151,
+      "old_pairs": 2,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-25",
+      "shot": 1997,
+      "old_pairs": 2,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-26",
+      "shot": 2,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-26",
+      "shot": 82,
+      "old_pairs": 2,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-26",
+      "shot": 261,
+      "old_pairs": 2,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-27",
+      "shot": 37,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-27",
+      "shot": 2187,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-27",
+      "shot": 7212,
+      "old_pairs": 5,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-28",
+      "shot": 1531,
+      "old_pairs": 1,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-28",
+      "shot": 1843,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-28",
+      "shot": 2485,
+      "old_pairs": 1,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-29",
+      "shot": 425,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-29",
+      "shot": 457,
+      "old_pairs": 4,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-29",
+      "shot": 983,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-30",
+      "shot": 1070,
+      "old_pairs": 5,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-30",
+      "shot": 2547,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-30",
+      "shot": 2954,
+      "old_pairs": 5,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-31",
+      "shot": 1406,
+      "old_pairs": 5,
+      "retained_old_pairs": 2,
+      "guarded_pairs": 2
+    },
+    {
+      "point": "point-31",
+      "shot": 3189,
+      "old_pairs": 7,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-31",
+      "shot": 4414,
+      "old_pairs": 5,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-32",
+      "shot": 18,
+      "old_pairs": 4,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-32",
+      "shot": 37,
+      "old_pairs": 7,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-32",
+      "shot": 177,
+      "old_pairs": 3,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-33",
+      "shot": 13,
+      "old_pairs": 14,
+      "retained_old_pairs": 2,
+      "guarded_pairs": 2
+    },
+    {
+      "point": "point-33",
+      "shot": 7167,
+      "old_pairs": 8,
+      "retained_old_pairs": 4,
+      "guarded_pairs": 4
+    },
+    {
+      "point": "point-33",
+      "shot": 7624,
+      "old_pairs": 7,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    },
+    {
+      "point": "point-34",
+      "shot": 218,
+      "old_pairs": 7,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-34",
+      "shot": 943,
+      "old_pairs": 8,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-34",
+      "shot": 973,
+      "old_pairs": 10,
+      "retained_old_pairs": 2,
+      "guarded_pairs": 2
+    },
+    {
+      "point": "point-35",
+      "shot": 117,
+      "old_pairs": 8,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-35",
+      "shot": 135,
+      "old_pairs": 11,
+      "retained_old_pairs": 0,
+      "guarded_pairs": 0
+    },
+    {
+      "point": "point-35",
+      "shot": 245,
+      "old_pairs": 9,
+      "retained_old_pairs": 1,
+      "guarded_pairs": 1
+    }
+  ],
+  "scope": "Selected M6 B-only failures used for development; not an unbiased safety estimate"
+}

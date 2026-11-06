@@ -5,6 +5,14 @@ The first M0–M6 study is implemented, tested and reported in
 digital prototype, not a deployed FPGA system or a publication claim. Earlier
 milestone reports preserve the history of smaller preliminary runs.
 
+The latest extension is [F1](milestones/F1.md): a preregistered guarded rule tested
+on 1.2 million fresh primary shots plus 220,000 control/stress shots. It has no
+observed baseline prediction disagreements and passes the provisional simultaneous
+accuracy bounds, but its best adaptive saving is 4.00%, below its fixed 5% target.
+It remains slower on CPU and is **not promoted to RTL**. See the
+[verdict](evidence/F1/verdict.json), [figures](evidence/F1/F1_bytes.png) and
+[data](evidence/F1/results.csv). The M6 findings below describe the earlier study.
+
 ## Evidence
 
 - 36 configurations, 30,000 shots each: **1,080,000 main-study windows**, identical

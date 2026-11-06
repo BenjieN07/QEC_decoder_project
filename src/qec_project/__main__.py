@@ -90,12 +90,12 @@ def main(argv=None):
         return benchmark(args.replay)
     if argv and argv[0] in ('demo', 'sweep'):
         return experiment_cli(argv)
-    parser = argparse.ArgumentParser(description="QEC research: demo, sweep, study, benchmark, compare, model; or infrastructure --smoke")
+    parser = argparse.ArgumentParser(description="QEC research: demo, sweep, study, guarded, benchmark, compare, model; or infrastructure --smoke")
     parser.add_argument("--config", type=Path, default=Path("configs/smoke.json"))
     parser.add_argument("--smoke", action="store_true", help="validate settings and write an environment manifest")
     args = parser.parse_args(argv)
     if not args.smoke:
-        parser.error("specify --smoke or a command: demo, sweep, study, benchmark, compare, model")
+        parser.error("specify --smoke or a command: demo, sweep, study, guarded, benchmark, compare, model")
     try:
         path = write_manifest(load_config(args.config))
     except (OSError, ValueError) as error:

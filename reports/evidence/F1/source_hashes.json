@@ -1,0 +1,9 @@
+{
+  "scope": "Archive-time files; frozen execution revision is recorded in manifest.git",
+  "files": {
+    "src\\qec_project\\guarded.py": "aa75bcb037126c06bb31949c30f812dd2ce7321b8e3f7db995329cf19d593376",
+    "src\\qec_project\\guarded_study.py": "e9c5d3104e4bd1d22b2e7d4b70179f12b60faf4eaf8ee2e5b27c4bbdec35824b",
+    "src\\qec_project\\statistics.py": "c0c020356e7ac972c9e085d053e70a38a23f0f036f64ee3e5109d3fa8dd364a3",
+    "C:\\oned\\QEC_decoder_project-1\\scripts\\package_guarded.py": "adb16623ce3c0fd1ea96804b8d378ad4160e399f06f69635324973ff1df28cb9"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "smoke": false,
+  "primary_points": 12,
+  "accuracy_all_primary_pass": true,
+  "communication_any_primary_pass": false,
+  "promote": false,
+  "tolerance": 0.0002,
+  "minimum_adaptive_reduction": 0.05,
+  "development_audit": {
+    "cases": 72,
+    "old_pairs": 379,
+    "retained_old_pairs": 32,
+    "cases_no_guarded_decision": 50,
+    "scope": "Selected M6 B-only failures used for development; not an unbiased safety estimate"
+  },
+  "interpretation": "Frozen F1 rule; no post-evaluation threshold tuning"
+}

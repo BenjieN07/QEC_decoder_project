@@ -1,0 +1,254 @@
+[
+  {
+    "point": "point-00",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-00",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-01",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-01",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-02",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 60
+  },
+  {
+    "point": "point-02",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-03",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 231
+  },
+  {
+    "point": "point-03",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-04",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 124
+  },
+  {
+    "point": "point-04",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-05",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 460
+  },
+  {
+    "point": "point-05",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-06",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-06",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-07",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-07",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-08",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 43
+  },
+  {
+    "point": "point-08",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-09",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 192
+  },
+  {
+    "point": "point-09",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-10",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 127
+  },
+  {
+    "point": "point-10",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-11",
+    "role": "primary",
+    "decoder": "isolated",
+    "shots": 100000,
+    "prediction_disagreements": 407
+  },
+  {
+    "point": "point-11",
+    "role": "primary",
+    "decoder": "guarded",
+    "shots": 100000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-12",
+    "role": "stress",
+    "decoder": "isolated",
+    "shots": 50000,
+    "prediction_disagreements": 203
+  },
+  {
+    "point": "point-12",
+    "role": "stress",
+    "decoder": "guarded",
+    "shots": 50000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-13",
+    "role": "stress",
+    "decoder": "isolated",
+    "shots": 50000,
+    "prediction_disagreements": 448
+  },
+  {
+    "point": "point-13",
+    "role": "stress",
+    "decoder": "guarded",
+    "shots": 50000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-14",
+    "role": "stress",
+    "decoder": "isolated",
+    "shots": 50000,
+    "prediction_disagreements": 192
+  },
+  {
+    "point": "point-14",
+    "role": "stress",
+    "decoder": "guarded",
+    "shots": 50000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-15",
+    "role": "stress",
+    "decoder": "isolated",
+    "shots": 50000,
+    "prediction_disagreements": 438
+  },
+  {
+    "point": "point-15",
+    "role": "stress",
+    "decoder": "guarded",
+    "shots": 50000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-16",
+    "role": "noiseless",
+    "decoder": "isolated",
+    "shots": 10000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-16",
+    "role": "noiseless",
+    "decoder": "guarded",
+    "shots": 10000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-17",
+    "role": "noiseless",
+    "decoder": "isolated",
+    "shots": 10000,
+    "prediction_disagreements": 0
+  },
+  {
+    "point": "point-17",
+    "role": "noiseless",
+    "decoder": "guarded",
+    "shots": 10000,
+    "prediction_disagreements": 0
+  }
+]

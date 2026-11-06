@@ -12,7 +12,7 @@ def exact_interval(count, shots, alpha=.05):
 def paired_interval(baseline_only, hybrid_only, shots, alpha=.05):
     if baseline_only+hybrid_only > shots:
         raise ValueError('discordant counts exceed shots')
-    # Each marginal interval is 97.5%; Bonferroni gives >=95% joint coverage.
+    # Each marginal uses alpha/2; Bonferroni gives >=1-alpha joint coverage.
     if not 0<alpha<1:
         raise ValueError('alpha must lie between 0 and 1')
     a = exact_interval(baseline_only,shots,alpha/2)

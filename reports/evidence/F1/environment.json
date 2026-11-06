@@ -1,0 +1,9 @@
+{
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "networkx": "3.7",
+  "stim": "1.16.0",
+  "pymatching": "2.4.0",
+  "matplotlib": "3.11.2",
+  "pytest": "9.2.0"
+}

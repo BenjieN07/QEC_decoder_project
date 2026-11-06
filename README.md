@@ -8,6 +8,23 @@ accuracy degradation. There are no physical FPGA performance or power claims.
 Read the [final report](reports/final_report.md), [status](reports/PROJECT_STATUS.md)
 and [measurement methods](docs/research_methods.md).
 
+The [F1 follow-up](reports/milestones/F1.md) tests a frozen guarded rule on fresh
+samples. It meets the provisional accuracy tolerance but misses its 5% traffic
+target and is not promoted to RTL. Its best adaptive saving is 4.00%, with no
+observed baseline prediction disagreements over 1.2 million primary shots.
+
+```powershell
+# Small F1 pipeline check (separate smoke data):
+.\.venv\Scripts\python.exe -m qec_project guarded --smoke
+# Full registered F1 experiment (1.42 million shots):
+.\.venv\Scripts\python.exe -m qec_project guarded
+```
+
+Inspect [accuracy](reports/evidence/F1/F1_accuracy.png),
+[traffic](reports/evidence/F1/F1_bytes.png) and [CSV](reports/evidence/F1/results.csv)
+without rerunning. The original M6 study and hardware results remain historical
+evidence for the original rule, not verification of F1.
+
 ## See a result quickly
 
 From this folder in Windows PowerShell:
