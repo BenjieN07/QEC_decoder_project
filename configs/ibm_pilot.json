@@ -1,0 +1,10 @@
+{
+  "distance": 3,
+  "rounds": 3,
+  "bases": ["X", "Z"],
+  "shots_per_basis": 512,
+  "decoder_prior_probability": 0.005,
+  "transpiler_seed": 20261106,
+  "max_execution_time_seconds": 60,
+  "minimum_free_remaining_seconds": 120
+}

@@ -11,6 +11,7 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10"]
+ibm = ["qiskit>=2.6,<3", "qiskit-ibm-runtime>=0.51,<0.52", "qiskit-aer>=0.18,<0.19"]
 research = ["stim>=1.15,<2", "pymatching>=2.3,<3", "sinter>=1.15,<2", "numpy>=1.26,<3", "scipy>=1.11,<2", "matplotlib>=3.8,<4", "networkx>=3,<4"]
 
 [project.scripts]
