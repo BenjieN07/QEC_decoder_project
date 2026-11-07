@@ -1,0 +1,917 @@
+{
+  "scope": "Exploratory replay and prior predictive check; no fitted decoder or new hardware job",
+  "seed": 20261107,
+  "prior_simulation_shots_per_basis": 50000,
+  "input_sha256": {
+    "X.stim": "af43171b7dbe618d1a719bbc37cacb68f40d0e75e22ae4e24dd0e7b258d2202b",
+    "X.dem": "af7323ee5951f34697cd285e240af47a2dccd96d1b12ba1f7c0804a08c7b35fe",
+    "X-measurements.npz": "8ac1c24d632d3c86cca9a593330fe0492fecd54fd14ae91ad32ba8865a27cd0a",
+    "Z.stim": "7a2807745d1b44ca53e335069e23123bd4e0c4fcb25aaf5df95706049d72b9ee",
+    "Z.dem": "7e30d76d9ca338f14a9fc18a317442ae3b5c8c46cd812d6364ec4d98bdf34749",
+    "Z-measurements.npz": "4d2da76932fded1b22fd6d67ed0fd78c42425718f81eaec449eb4eb709dbd24f"
+  },
+  "results": [
+    {
+      "basis": "X",
+      "replay_verified": true,
+      "variants_equal": {
+        "isolated": true,
+        "max2": true,
+        "guarded": true
+      },
+      "physical": {
+        "shots": 512,
+        "zero_frame_failures": 243,
+        "decoded_failures": 242,
+        "helped": 89,
+        "hurt": 88,
+        "both_wrong": 154,
+        "both_correct": 181,
+        "decoded_minus_zero_frame_ci": [
+          -0.078652770509295,
+          0.07477619187635456
+        ]
+      },
+      "prior_simulation": {
+        "shots": 50000,
+        "zero_frame_failures": 5162,
+        "decoded_failures": 975,
+        "helped": 4642,
+        "hurt": 455,
+        "both_wrong": 520,
+        "both_correct": 44383,
+        "decoded_minus_zero_frame_ci": [
+          -0.08761468744340295,
+          -0.07985223242220109
+        ]
+      },
+      "observed_mean_events": 8.1640625,
+      "prior_mean_events": 1.4491,
+      "abstract_cx": 72,
+      "routed_cz": 312,
+      "routed_cz_per_abstract_cx": 4.333333333333333,
+      "event_groups": [
+        {
+          "shots": 13,
+          "zero_frame_failures": 8,
+          "decoded_failures": 4,
+          "helped": 5,
+          "hurt": 1,
+          "both_wrong": 3,
+          "both_correct": 4,
+          "decoded_minus_zero_frame_ci": [
+            -0.7164621343141744,
+            0.283646753913748
+          ],
+          "event_range": [
+            0,
+            3
+          ]
+        },
+        {
+          "shots": 191,
+          "zero_frame_failures": 86,
+          "decoded_failures": 88,
+          "helped": 31,
+          "hurt": 33,
+          "both_wrong": 55,
+          "both_correct": 72,
+          "decoded_minus_zero_frame_ci": [
+            -0.11543691907413373,
+            0.13594004491598716
+          ],
+          "event_range": [
+            4,
+            7
+          ]
+        },
+        {
+          "shots": 258,
+          "zero_frame_failures": 124,
+          "decoded_failures": 125,
+          "helped": 46,
+          "hurt": 47,
+          "both_wrong": 78,
+          "both_correct": 87,
+          "decoded_minus_zero_frame_ci": [
+            -0.10687685287060461,
+            0.11451025697064074
+          ],
+          "event_range": [
+            8,
+            11
+          ]
+        },
+        {
+          "shots": 50,
+          "zero_frame_failures": 25,
+          "decoded_failures": 25,
+          "helped": 7,
+          "hurt": 7,
+          "both_wrong": 18,
+          "both_correct": 18,
+          "decoded_minus_zero_frame_ci": [
+            -0.23561423615130628,
+            0.23561423615130628
+          ],
+          "event_range": [
+            12,
+            24
+          ]
+        }
+      ],
+      "detectors": [
+        {
+          "detector": 0,
+          "coordinates": [
+            2.0,
+            0.0,
+            0.0
+          ],
+          "observed_fraction": 0.14453125,
+          "observed_ci": [
+            0.11671916196909964,
+            0.17763767233388728
+          ],
+          "prior_fraction": 0.03708
+        },
+        {
+          "detector": 1,
+          "coordinates": [
+            2.0,
+            4.0,
+            0.0
+          ],
+          "observed_fraction": 0.203125,
+          "observed_ci": [
+            0.1705465380866688,
+            0.2401251037487928
+          ],
+          "prior_fraction": 0.07076
+        },
+        {
+          "detector": 2,
+          "coordinates": [
+            4.0,
+            2.0,
+            0.0
+          ],
+          "observed_fraction": 0.3828125,
+          "observed_ci": [
+            0.34173001550060694,
+            0.42564036943444367
+          ],
+          "prior_fraction": 0.063
+        },
+        {
+          "detector": 3,
+          "coordinates": [
+            4.0,
+            6.0,
+            0.0
+          ],
+          "observed_fraction": 0.23046875,
+          "observed_ci": [
+            0.19607853064656888,
+            0.2688733547040476
+          ],
+          "prior_fraction": 0.0473
+        },
+        {
+          "detector": 4,
+          "coordinates": [
+            2.0,
+            0.0,
+            1.0
+          ],
+          "observed_fraction": 0.396484375,
+          "observed_ci": [
+            0.35503511324318504,
+            0.439475393449443
+          ],
+          "prior_fraction": 0.05886
+        },
+        {
+          "detector": 5,
+          "coordinates": [
+            2.0,
+            2.0,
+            1.0
+          ],
+          "observed_fraction": 0.40234375,
+          "observed_ci": [
+            0.3607477977267102,
+            0.44539418971916533
+          ],
+          "prior_fraction": 0.07378
+        },
+        {
+          "detector": 6,
+          "coordinates": [
+            4.0,
+            2.0,
+            1.0
+          ],
+          "observed_fraction": 0.513671875,
+          "observed_ci": [
+            0.47043814338260587,
+            0.5567019783749716
+          ],
+          "prior_fraction": 0.08528
+        },
+        {
+          "detector": 7,
+          "coordinates": [
+            6.0,
+            2.0,
+            1.0
+          ],
+          "observed_fraction": 0.17578125,
+          "observed_ci": [
+            0.1452599464463597,
+            0.2111314518739471
+          ],
+          "prior_fraction": 0.04624
+        },
+        {
+          "detector": 8,
+          "coordinates": [
+            0.0,
+            4.0,
+            1.0
+          ],
+          "observed_fraction": 0.220703125,
+          "observed_ci": [
+            0.18693397436110393,
+            0.2586321097341001
+          ],
+          "prior_fraction": 0.04566
+        },
+        {
+          "detector": 9,
+          "coordinates": [
+            2.0,
+            4.0,
+            1.0
+          ],
+          "observed_fraction": 0.4453125,
+          "observed_ci": [
+            0.4028287556857245,
+            0.48861075728396575
+          ],
+          "prior_fraction": 0.08386
+        },
+        {
+          "detector": 10,
+          "coordinates": [
+            4.0,
+            4.0,
+            1.0
+          ],
+          "observed_fraction": 0.380859375,
+          "observed_ci": [
+            0.33983211473823877,
+            0.4236611099457294
+          ],
+          "prior_fraction": 0.07296
+        },
+        {
+          "detector": 11,
+          "coordinates": [
+            4.0,
+            6.0,
+            1.0
+          ],
+          "observed_fraction": 0.369140625,
+          "observed_ci": [
+            0.32845975653728954,
+            0.41177050664018366
+          ],
+          "prior_fraction": 0.05758
+        },
+        {
+          "detector": 12,
+          "coordinates": [
+            2.0,
+            0.0,
+            2.0
+          ],
+          "observed_fraction": 0.34765625,
+          "observed_ci": [
+            0.3076787445961284,
+            0.3899027558194375
+          ],
+          "prior_fraction": 0.05758
+        },
+        {
+          "detector": 13,
+          "coordinates": [
+            2.0,
+            2.0,
+            2.0
+          ],
+          "observed_fraction": 0.38671875,
+          "observed_ci": [
+            0.34552794745577303,
+            0.42959675798144265
+          ],
+          "prior_fraction": 0.072
+        },
+        {
+          "detector": 14,
+          "coordinates": [
+            4.0,
+            2.0,
+            2.0
+          ],
+          "observed_fraction": 0.490234375,
+          "observed_ci": [
+            0.4471673378916501,
+            0.5334468608529375
+          ],
+          "prior_fraction": 0.08626
+        },
+        {
+          "detector": 15,
+          "coordinates": [
+            6.0,
+            2.0,
+            2.0
+          ],
+          "observed_fraction": 0.197265625,
+          "observed_ci": [
+            0.16510605271370543,
+            0.23393410836850875
+          ],
+          "prior_fraction": 0.0473
+        },
+        {
+          "detector": 16,
+          "coordinates": [
+            0.0,
+            4.0,
+            2.0
+          ],
+          "observed_fraction": 0.212890625,
+          "observed_ci": [
+            0.17963878194802874,
+            0.25041866114284533
+          ],
+          "prior_fraction": 0.0452
+        },
+        {
+          "detector": 17,
+          "coordinates": [
+            2.0,
+            4.0,
+            2.0
+          ],
+          "observed_fraction": 0.466796875,
+          "observed_ci": [
+            0.42399073881526494,
+            0.5100975369163327
+          ],
+          "prior_fraction": 0.0862
+        },
+        {
+          "detector": 18,
+          "coordinates": [
+            4.0,
+            4.0,
+            2.0
+          ],
+          "observed_fraction": 0.4140625,
+          "observed_ci": [
+            0.37219182061737377,
+            0.4572131283349967
+          ],
+          "prior_fraction": 0.07222
+        },
+        {
+          "detector": 19,
+          "coordinates": [
+            4.0,
+            6.0,
+            2.0
+          ],
+          "observed_fraction": 0.474609375,
+          "observed_ci": [
+            0.43170578221120814,
+            0.5178911345247195
+          ],
+          "prior_fraction": 0.05614
+        },
+        {
+          "detector": 20,
+          "coordinates": [
+            2.0,
+            0.0,
+            3.0
+          ],
+          "observed_fraction": 0.30859375,
+          "observed_ci": [
+            0.27013248750358254,
+            0.34990580789033354
+          ],
+          "prior_fraction": 0.04038
+        },
+        {
+          "detector": 21,
+          "coordinates": [
+            2.0,
+            4.0,
+            3.0
+          ],
+          "observed_fraction": 0.330078125,
+          "observed_ci": [
+            0.2907439558701836,
+            0.3719431022856398
+          ],
+          "prior_fraction": 0.05216
+        },
+        {
+          "detector": 22,
+          "coordinates": [
+            4.0,
+            2.0,
+            3.0
+          ],
+          "observed_fraction": 0.36328125,
+          "observed_ci": [
+            0.32278335155989013,
+            0.4058154308643356
+          ],
+          "prior_fraction": 0.06122
+        },
+        {
+          "detector": 23,
+          "coordinates": [
+            4.0,
+            6.0,
+            3.0
+          ],
+          "observed_fraction": 0.306640625,
+          "observed_ci": [
+            0.26826359920760706,
+            0.3478975359352265
+          ],
+          "prior_fraction": 0.03008
+        }
+      ]
+    },
+    {
+      "basis": "Z",
+      "replay_verified": true,
+      "variants_equal": {
+        "isolated": true,
+        "max2": true,
+        "guarded": true
+      },
+      "physical": {
+        "shots": 512,
+        "zero_frame_failures": 195,
+        "decoded_failures": 165,
+        "helped": 101,
+        "hurt": 71,
+        "both_wrong": 94,
+        "both_correct": 246,
+        "decoded_minus_zero_frame_ci": [
+          -0.1336143836747441,
+          0.017319485593493278
+        ]
+      },
+      "prior_simulation": {
+        "shots": 50000,
+        "zero_frame_failures": 5130,
+        "decoded_failures": 870,
+        "helped": 4649,
+        "hurt": 389,
+        "both_wrong": 481,
+        "both_correct": 44481,
+        "decoded_minus_zero_frame_ci": [
+          -0.08900538856156942,
+          -0.08138123108908947
+        ]
+      },
+      "observed_mean_events": 7.431640625,
+      "prior_mean_events": 1.40104,
+      "abstract_cx": 72,
+      "routed_cz": 312,
+      "routed_cz_per_abstract_cx": 4.333333333333333,
+      "event_groups": [
+        {
+          "shots": 26,
+          "zero_frame_failures": 11,
+          "decoded_failures": 1,
+          "helped": 11,
+          "hurt": 1,
+          "both_wrong": 0,
+          "both_correct": 14,
+          "decoded_minus_zero_frame_ci": [
+            -0.655832861117559,
+            0.009127518813458052
+          ],
+          "event_range": [
+            0,
+            3
+          ]
+        },
+        {
+          "shots": 238,
+          "zero_frame_failures": 79,
+          "decoded_failures": 69,
+          "helped": 41,
+          "hurt": 31,
+          "both_wrong": 38,
+          "both_correct": 128,
+          "decoded_minus_zero_frame_ci": [
+            -0.14887992674625133,
+            0.0662669127791696
+          ],
+          "event_range": [
+            4,
+            7
+          ]
+        },
+        {
+          "shots": 214,
+          "zero_frame_failures": 93,
+          "decoded_failures": 81,
+          "helped": 43,
+          "hurt": 31,
+          "both_wrong": 50,
+          "both_correct": 90,
+          "decoded_minus_zero_frame_ci": [
+            -0.1744594617633041,
+            0.0643979468757673
+          ],
+          "event_range": [
+            8,
+            11
+          ]
+        },
+        {
+          "shots": 34,
+          "zero_frame_failures": 12,
+          "decoded_failures": 14,
+          "helped": 6,
+          "hurt": 8,
+          "both_wrong": 6,
+          "both_correct": 14,
+          "decoded_minus_zero_frame_ci": [
+            -0.2745810566025464,
+            0.37817083077847347
+          ],
+          "event_range": [
+            12,
+            24
+          ]
+        }
+      ],
+      "detectors": [
+        {
+          "detector": 0,
+          "coordinates": [
+            0.0,
+            4.0,
+            0.0
+          ],
+          "observed_fraction": 0.0546875,
+          "observed_ci": [
+            0.03810443399268586,
+            0.07790302876050659
+          ],
+          "prior_fraction": 0.0316
+        },
+        {
+          "detector": 1,
+          "coordinates": [
+            2.0,
+            2.0,
+            0.0
+          ],
+          "observed_fraction": 0.478515625,
+          "observed_ci": [
+            0.4355672416399762,
+            0.5217839955981164
+          ],
+          "prior_fraction": 0.05816
+        },
+        {
+          "detector": 2,
+          "coordinates": [
+            4.0,
+            4.0,
+            0.0
+          ],
+          "observed_fraction": 0.216796875,
+          "observed_ci": [
+            0.18328405527165026,
+            0.2545277083213888
+          ],
+          "prior_fraction": 0.06718
+        },
+        {
+          "detector": 3,
+          "coordinates": [
+            6.0,
+            2.0,
+            0.0
+          ],
+          "observed_fraction": 0.095703125,
+          "observed_ci": [
+            0.0731491689139741,
+            0.12427865911195063
+          ],
+          "prior_fraction": 0.03972
+        },
+        {
+          "detector": 4,
+          "coordinates": [
+            2.0,
+            0.0,
+            1.0
+          ],
+          "observed_fraction": 0.34765625,
+          "observed_ci": [
+            0.3076787445961284,
+            0.3899027558194375
+          ],
+          "prior_fraction": 0.0577
+        },
+        {
+          "detector": 5,
+          "coordinates": [
+            2.0,
+            2.0,
+            1.0
+          ],
+          "observed_fraction": 0.46875,
+          "observed_ci": [
+            0.4259185141654849,
+            0.5120469218171952
+          ],
+          "prior_fraction": 0.07294
+        },
+        {
+          "detector": 6,
+          "coordinates": [
+            4.0,
+            2.0,
+            1.0
+          ],
+          "observed_fraction": 0.451171875,
+          "observed_ci": [
+            0.40859226482341326,
+            0.4944787288995245
+          ],
+          "prior_fraction": 0.08548
+        },
+        {
+          "detector": 7,
+          "coordinates": [
+            6.0,
+            2.0,
+            1.0
+          ],
+          "observed_fraction": 0.16015625,
+          "observed_ci": [
+            0.13093694655859203,
+            0.19443716975305483
+          ],
+          "prior_fraction": 0.04552
+        },
+        {
+          "detector": 8,
+          "coordinates": [
+            0.0,
+            4.0,
+            1.0
+          ],
+          "observed_fraction": 0.166015625,
+          "observed_ci": [
+            0.1362963882209846,
+            0.20070920884390975
+          ],
+          "prior_fraction": 0.045
+        },
+        {
+          "detector": 9,
+          "coordinates": [
+            2.0,
+            4.0,
+            1.0
+          ],
+          "observed_fraction": 0.474609375,
+          "observed_ci": [
+            0.43170578221120814,
+            0.5178911345247195
+          ],
+          "prior_fraction": 0.08382
+        },
+        {
+          "detector": 10,
+          "coordinates": [
+            4.0,
+            4.0,
+            1.0
+          ],
+          "observed_fraction": 0.3515625,
+          "observed_ci": [
+            0.31145042026337416,
+            0.3938854006543567
+          ],
+          "prior_fraction": 0.07274
+        },
+        {
+          "detector": 11,
+          "coordinates": [
+            4.0,
+            6.0,
+            1.0
+          ],
+          "observed_fraction": 0.408203125,
+          "observed_ci": [
+            0.36646671437938244,
+            0.45130675381974056
+          ],
+          "prior_fraction": 0.05808
+        },
+        {
+          "detector": 12,
+          "coordinates": [
+            2.0,
+            0.0,
+            2.0
+          ],
+          "observed_fraction": 0.373046875,
+          "observed_ci": [
+            0.33224766198783645,
+            0.4157369216918017
+          ],
+          "prior_fraction": 0.05704
+        },
+        {
+          "detector": 13,
+          "coordinates": [
+            2.0,
+            2.0,
+            2.0
+          ],
+          "observed_fraction": 0.3671875,
+          "observed_ci": [
+            0.3265668920550496,
+            0.4097862108713412
+          ],
+          "prior_fraction": 0.07462
+        },
+        {
+          "detector": 14,
+          "coordinates": [
+            4.0,
+            2.0,
+            2.0
+          ],
+          "observed_fraction": 0.490234375,
+          "observed_ci": [
+            0.4471673378916501,
+            0.5334468608529375
+          ],
+          "prior_fraction": 0.08302
+        },
+        {
+          "detector": 15,
+          "coordinates": [
+            6.0,
+            2.0,
+            2.0
+          ],
+          "observed_fraction": 0.177734375,
+          "observed_ci": [
+            0.14705714493684846,
+            0.21321141363454083
+          ],
+          "prior_fraction": 0.04654
+        },
+        {
+          "detector": 16,
+          "coordinates": [
+            0.0,
+            4.0,
+            2.0
+          ],
+          "observed_fraction": 0.1953125,
+          "observed_ci": [
+            0.16329511493256677,
+            0.23186788589856488
+          ],
+          "prior_fraction": 0.0464
+        },
+        {
+          "detector": 17,
+          "coordinates": [
+            2.0,
+            4.0,
+            2.0
+          ],
+          "observed_fraction": 0.498046875,
+          "observed_ci": [
+            0.4549138158353452,
+            0.5412090239135723
+          ],
+          "prior_fraction": 0.08572
+        },
+        {
+          "detector": 18,
+          "coordinates": [
+            4.0,
+            4.0,
+            2.0
+          ],
+          "observed_fraction": 0.380859375,
+          "observed_ci": [
+            0.33983211473823877,
+            0.4236611099457294
+          ],
+          "prior_fraction": 0.07124
+        },
+        {
+          "detector": 19,
+          "coordinates": [
+            4.0,
+            6.0,
+            2.0
+          ],
+          "observed_fraction": 0.5078125,
+          "observed_ci": [
+            0.46461161789502853,
+            0.5508970231093013
+          ],
+          "prior_fraction": 0.05698
+        },
+        {
+          "detector": 20,
+          "coordinates": [
+            0.0,
+            4.0,
+            3.0
+          ],
+          "observed_fraction": 0.20703125,
+          "observed_ci": [
+            0.1741797850792416,
+            0.24424617725838504
+          ],
+          "prior_fraction": 0.03604
+        },
+        {
+          "detector": 21,
+          "coordinates": [
+            2.0,
+            2.0,
+            3.0
+          ],
+          "observed_fraction": 0.26171875,
+          "observed_ci": [
+            0.225518645748377,
+            0.30146780361955927
+          ],
+          "prior_fraction": 0.05406
+        },
+        {
+          "detector": 22,
+          "coordinates": [
+            4.0,
+            4.0,
+            3.0
+          ],
+          "observed_fraction": 0.220703125,
+          "observed_ci": [
+            0.18693397436110393,
+            0.2586321097341001
+          ],
+          "prior_fraction": 0.0467
+        },
+        {
+          "detector": 23,
+          "coordinates": [
+            6.0,
+            2.0,
+            3.0
+          ],
+          "observed_fraction": 0.078125,
+          "observed_ci": [
+            0.05789550378543784,
+            0.10463788198074447
+          ],
+          "prior_fraction": 0.02474
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Prior samples omit physical routing and device-specific noise.",
+    "Zero-frame comparison is not an unencoded-memory control.",
+    "Detector intervals are pointwise; detectors and strata are not independent.",
+    "These already-inspected hardware records are development data, not fresh validation."
+  ]
+}

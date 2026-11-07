@@ -1,5 +1,11 @@
 # Project status
 
+[H2](milestones/H2.md) completes an offline audit of H1: raw-record conversion and
+baseline scores reproduce exactly. Observed detector activity is roughly five to
+six times the archived prior's expectation. This supports controls, layout work
+and independently calibrated noise assumptions before another physical run;
+it does not isolate a cause or demonstrate a corrected decoder. No new job was submitted.
+
 The first M0–M6 study is implemented, tested and reported in
 [final_report.md](final_report.md). It is a simulated QEC decoder and verified
 digital prototype, not a deployed FPGA system or a publication claim. Earlier

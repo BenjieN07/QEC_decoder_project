@@ -8,6 +8,17 @@ accuracy degradation. There are no physical FPGA performance or power claims.
 Read the [final report](reports/final_report.md), [status](reports/PROJECT_STATUS.md)
 and [measurement methods](docs/research_methods.md).
 
+**Hardware diagnostic follow-up:** [H2](reports/milestones/H2.md) reproduces the
+physical scores and finds 7.4–8.2 detector events/window versus about 1.4 under the
+decoder's assumed noise model. Run the offline audit without cloud access:
+
+```powershell
+.\.venv\Scripts\python.exe -m qec_project.hardware_audit
+```
+
+Open `results/h1-audit/detector_activity.png` and `audit.json` to inspect the
+model mismatch and outcomes helped or spoiled by decoding. No new QPU job is submitted.
+
 **Real quantum-hardware pilot completed:** [H1](reports/milestones/H1.md) ran 512
 X and 512 Z memory shots on IBM's ibm_marrakesh processor. Logical memory failure
 fractions were 47.27% and 32.23% with an uncalibrated prior. This validates the
